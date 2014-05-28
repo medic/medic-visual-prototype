@@ -1,0 +1,15 @@
+{
+  "name": "kujua-visual",
+  "description": "Visual layer mockup for Kujua",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "hbs": "1.x",
+    "async": "0.x",
+    "express": "4.x",
+    "body-parser": "1.x",
+    "connect-flash": "0.x",
+    "cookie-parser": "1.x",
+    "cookie-session": "1.x"
+  }
+}

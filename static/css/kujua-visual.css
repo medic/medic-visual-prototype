@@ -1,0 +1,111 @@
+
+html, body {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  font-size: 12pt;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Lato';
+  background: url('../images/texture.png');
+  background: image-set(
+    url('../images/texture.png') 1x,
+    url('../images/texture-hires.png') 2x
+  ); 
+  background: -webkit-image-set( 
+    url('../images/texture.png') 1x, 
+    url('../images/texture-hires.png') 2x 
+  ); 
+}
+
+.icon-container, .button-container {
+  padding: 0.5em;
+}
+
+.icon-border {
+  padding-top: 0.45em;
+  padding-bottom: 0.45em;
+}
+
+.icon {
+  color: #fff;
+  text-align: center;
+  border-radius: 10em;
+  padding: 0.25em 0.6em 0.25em 0.6em;
+  vertical-align: top;
+}
+  
+.icon-border {
+  border: solid 0.2em #fff;
+}
+
+.icon-round {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.icon-round span {
+  width: 1.8em;
+}
+
+.icon-raise span {
+  line-height: 1.4em;
+  vertical-align: top;
+}
+
+.icon-red {
+  background-color: rgb(218, 69, 72);
+}
+
+.icon-green {
+  background-color: rgb(160, 186, 98);
+}
+
+.button {
+  border-radius: 2em;
+  min-height: 3em;
+  width: 100%;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-dropdown {
+  color: #333;
+  float: right;
+  font-size: 0.95em;
+  padding: 0.8em 1em 0 1.25em;
+}
+
+.button-icon {
+  float: left;
+  color: #222;
+  font-size: 1.5em;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px;
+  padding: 0.22em 0.75em 0.22em 0.75em;
+}
+
+.button-text {
+  color: #222;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px;
+}
+
+span.button-text {
+  line-height: 3.2em;
+  vertical-align: middle;
+}
+
+div.button-text {
+  margin: 0.85em 0 0 0;
+}
+
+.button-lower .button-icon {
+  padding-top: 0.28em !important;
+}
+
+/* vim: set sw=2: */
