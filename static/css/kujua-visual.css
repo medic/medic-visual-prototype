@@ -21,16 +21,16 @@ html, body {
   ); 
 }
 
-.icon-container, .button-container {
+.k-badge-container, .k-button-container {
   padding: 0.5em;
 }
 
-.icon-border {
+.k-badge-border {
   padding-top: 0.45em;
   padding-bottom: 0.45em;
 }
 
-.icon {
+.k-badge {
   color: #fff;
   text-align: center;
   border-radius: 10em;
@@ -38,33 +38,33 @@ html, body {
   vertical-align: top;
 }
   
-.icon-border {
+.k-badge-border {
   border: solid 0.2em #fff;
 }
 
-.icon-round {
+.k-badge-round {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-.icon-round span {
+.k-badge-round span {
   width: 1.8em;
 }
 
-.icon-raise span {
+.k-badge-raise span {
   line-height: 1.4em;
   vertical-align: top;
 }
 
-.icon-red {
+.k-badge-red {
   background-color: rgb(218, 69, 72);
 }
 
-.icon-green {
+.k-badge-green {
   background-color: rgb(160, 186, 98);
 }
 
-.button {
+.k-button {
   border-radius: 2em;
   min-height: 3em;
   width: 100%;
@@ -73,14 +73,14 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.button-dropdown {
+.k-button-dropdown {
   color: #333;
   float: right;
   font-size: 0.95em;
   padding: 0.8em 1em 0 1.25em;
 }
 
-.button-icon {
+.k-button-icon {
   float: left;
   color: #222;
   font-size: 1.5em;
@@ -88,23 +88,23 @@ html, body {
   padding: 0.22em 0.75em 0.22em 0.75em;
 }
 
-.button-text {
+.k-button-text {
   color: #222;
   font-size: 0.9em;
   font-weight: bold;
   text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px;
 }
 
-span.button-text {
+span.k-button-text {
   line-height: 3.2em;
   vertical-align: middle;
 }
 
-div.button-text {
+div.k-button-text {
   margin: 0.85em 0 0 0;
 }
 
-.button-lower .button-icon {
+.k-button-lower .k-button-icon {
   padding-top: 0.28em !important;
 }
 
