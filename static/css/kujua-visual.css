@@ -28,15 +28,16 @@ html, body {
   clear: none;
 }
 
+.clear {
+  clear: both;
+}
+
+
 /**
  * @name k-badge:
  */
 .k-badge-container, .k-button-container, .k-icon-container {
   padding: 0.5em;
-}
-
-.clear {
-  clear: both;
 }
 
 .k-badge-border {
@@ -56,9 +57,9 @@ html, body {
   border: solid 0.2em #fff;
 }
 
-.k-badge-round {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+body .k-badge-round {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .k-badge-round span {
@@ -142,8 +143,8 @@ div.k-button-text {
   margin: 0.85em 0 0 0;
 }
 
-.k-button-lower .k-button-icon {
-  padding-top: 0.28em !important;
+body .k-button-lower .k-button-icon {
+  padding-top: 0.28em;
 }
 
 
@@ -159,9 +160,34 @@ div.k-button-text {
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 2px;
 }
 
-.k-icon-inverse {
-  color: #ddd !important;
-  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px !important;
+body .k-icon-inverse {
+  color: #ddd;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
+}
+
+.k-icon-overlay {
+  width: 0;
+  height: 0;
+  z-index: 100;
+  font-size: 0.65em;
+  display: block;
+  overflow: visible;
+  position: relative;
+  text-shadow: rgba(255, 255, 255, 0.75) 0 0 4px;
+}
+
+body .k-icon-inverse .k-icon-overlay {
+  text-shadow: rgba(0, 0, 0, 0.75) 0 0 4px;
+}
+
+.k-icon-overlay, .k-icon-overlay-after {
+  top: -1em;
+  left: 0.75em;
+}
+
+body .k-icon-overlay-before {
+  top: 1em;
+  left: 0.75em;
 }
 
 
