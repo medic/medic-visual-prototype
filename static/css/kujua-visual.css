@@ -6,7 +6,7 @@ html, body {
 .app {
   height: 100%;
   width: 100%;
-  font-size: 12pt;
+  font-size: 11pt;
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Lato';
@@ -84,9 +84,10 @@ body .k-badge-round {
  * @name k-button:
  */
 .k-button {
-  border-radius: 2em;
-  min-height: 3em;
   width: 100%;
+  cursor: pointer;
+  min-height: 3em;
+  border-radius: 2em;
   border: solid 1px rgba(0, 0, 0, 0.3);
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -143,7 +144,7 @@ div.k-button-text {
   margin: 0.85em 0 0 0;
 }
 
-body .k-button-lower .k-button-icon {
+body .k-button-nudge .k-button-icon {
   padding-top: 0.28em;
 }
 
@@ -190,10 +191,17 @@ body .k-icon-inverse .k-icon-overlay {
 }
 
 body .k-icon-overlay-before {
-  top: 1em;
+  top: 1.15em;
   left: 0.75em;
 }
 
+.k-icon-overlay-nudge {
+  line-height: 0.65em;
+}
+
+.k-icon-overlay-nudge-right {
+  padding-left: 0.25em;
+}
 
 /**
  * @name k-inverse-box:
