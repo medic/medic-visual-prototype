@@ -21,8 +21,22 @@ html, body {
   ); 
 }
 
-.k-badge-container, .k-button-container {
+.float-separator {
+  float: left;
+  width: 2em;
+  height: 1em;
+  clear: none;
+}
+
+/**
+ * @name k-badge:
+ */
+.k-badge-container, .k-button-container, .k-icon-container {
   padding: 0.5em;
+}
+
+.clear {
+  clear: both;
 }
 
 .k-badge-border {
@@ -64,6 +78,10 @@ html, body {
   background-color: rgb(160, 186, 98);
 }
 
+
+/**
+ * @name k-button:
+ */
 .k-button {
   border-radius: 2em;
   min-height: 3em;
@@ -73,26 +91,46 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.k-button-inverse {
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
+}
+
 .k-button-dropdown {
   color: #333;
   float: right;
   font-size: 0.95em;
   padding: 0.8em 1em 0 1.25em;
+  cursor: pointer;
+}
+
+.k-button-inverse .k-button-dropdown {
+  color: #ccc;
 }
 
 .k-button-icon {
   float: left;
   color: #222;
   font-size: 1.5em;
-  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px;
   padding: 0.22em 0.75em 0.22em 0.75em;
+}
+
+.k-button-inverse .k-button-icon {
+  color: #ccc;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
 .k-button-text {
   color: #222;
   font-size: 0.9em;
   font-weight: bold;
-  text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px;
+}
+
+.k-button-inverse .k-button-text {
+  color: #bbb;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
 }
 
 span.k-button-text {
@@ -106,6 +144,34 @@ div.k-button-text {
 
 .k-button-lower .k-button-icon {
   padding-top: 0.28em !important;
+}
+
+
+/**
+ * @name k-icon:
+ */
+
+.k-icon {
+  width: 1em;
+  color: #333;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 2px;
+}
+
+.k-icon-inverse {
+  color: #ddd !important;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px !important;
+}
+
+
+/**
+ * @name k-inverse-box:
+ */
+
+.k-inverse-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.15em;
 }
 
 /* vim: set sw=2: */
