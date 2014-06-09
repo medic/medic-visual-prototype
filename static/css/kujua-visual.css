@@ -94,7 +94,7 @@ body .k-badge-round {
 }
 
 .k-button-inverse {
-  border: solid 1px rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
 }
 
@@ -107,7 +107,7 @@ body .k-badge-round {
 }
 
 .k-button-inverse .k-button-dropdown {
-  color: #ccc;
+  color: #eee;
 }
 
 .k-button-icon {
@@ -119,7 +119,7 @@ body .k-badge-round {
 }
 
 .k-button-inverse .k-button-icon {
-  color: #ccc;
+  color: #eee;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
@@ -131,7 +131,7 @@ body .k-badge-round {
 }
 
 .k-button-inverse .k-button-text {
-  color: #bbb;
+  color: #eee;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
 }
 
@@ -209,7 +209,7 @@ body .k-icon-overlay-before {
 
 .k-inverse-box {
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0.15em;
+  border-radius: 10pt;
 }
 
 /* vim: set sw=2: */
