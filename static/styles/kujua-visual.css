@@ -32,12 +32,17 @@ html, body {
   clear: both;
 }
 
+.mm-badge-container, .mm-button-container, .mm-icon-container {
+  padding: 0.5em;
+}
+
 
 /**
  * @name mm-badge:
  */
-.mm-badge-container, .mm-button-container, .mm-icon-container {
-  padding: 0.5em;
+
+.mm-badge-container {
+  min-width: 3.5em; /* Webkit */
 }
 
 .mm-badge-border {
@@ -49,8 +54,13 @@ html, body {
   color: #fff;
   text-align: center;
   border-radius: 10em;
-  padding: 0.25em 0.6em 0.25em 0.6em;
+  padding: 0.3em 0.6em 0.3em 0.6em;
   vertical-align: top;
+}
+
+div.mm-badge {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
   
 .mm-badge-border {
@@ -301,7 +311,7 @@ body .mm-icon-overlay-before {
 }
 
 .row.header .tabs a.selected, .row.filters {
-  background-color: #E0D7AB;
+  background-color: #e0d7ab;
 }
 
 .row.filters {
@@ -310,7 +320,7 @@ body .mm-icon-overlay-before {
 }
 
 .container {
-  background-color: #F2F2F3;
+  background-color: #f2f2f3;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -336,7 +346,7 @@ body .mm-icon-overlay-before {
 }
 
 .inbox-items li {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
   padding: 1em;
   cursor: pointer;
 }
@@ -346,7 +356,7 @@ body .mm-icon-overlay-before {
 }
 
 .inbox-items li.selected, .inbox-items li:hover {
-  background-color: #D8ECF1;
+  background-color: #d8ecf1;
 }
 
 .inbox-items .mm-badge-container {
@@ -373,8 +383,8 @@ body .mm-icon-overlay-before {
 }
 
 .item-content .body {
-  background-color: #FFF;
-  border: 1px solid #E0E0E0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
   border-radius: 2px;
   padding-bottom: 4em;
 }
@@ -387,12 +397,12 @@ body .mm-icon-overlay-before {
 }
 
 .item-content.incomplete .body h2 {
-  color: #E74D4E;
+  color: #e74d4e;
 }
 
 .item-content .body li {
-  border-bottom: 1px solid #E0E0E0;
-  padding: 1em 3em;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1em 3em 1em 2em;
 }
 
 .item-content .body li:last-child {
@@ -416,7 +426,7 @@ body .mm-icon-overlay-before {
 .item-content .actions {
   width: 60%;
   height: 6em;
-  background-color: #4A4A4A;
+  background-color: #4a4a4a;
   margin: -3em auto 5em;
   text-align: center;
 }
