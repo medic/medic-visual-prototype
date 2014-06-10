@@ -213,4 +213,120 @@ body .mm-icon-overlay-before {
   border-radius: 10pt;
 }
 
+.row.header {
+  background-color: #494949;
+  height: 80px;
+}
+
+.row.filters {
+  background-color: #E0D7AB;
+  height: 60px;
+}
+
+.container {
+  background-color: #F2F2F3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.row.content {
+  top: 140px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.inbox-items, .item-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.inbox-items {
+  padding: 0;
+}
+
+.inbox-items li {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.inbox-items li:last-child {
+  border-bottom: none;
+}
+
+.item-content {
+  padding: 1em;
+}
+
+.item-content .meta {
+  padding: 1em 2em 2em;
+}
+
+.item-content .body {
+  background-color: #FFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding-bottom: 4em;
+}
+
+.item-content .body h2 {
+  margin: 1em;
+  text-align: center;
+}
+
+.item-content .body li {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 3em;
+}
+
+.item-content .body li:last-child {
+  border-bottom: none;
+}
+
+.item-content .body label {
+  display: block;
+  margin: 0;
+  font-weight: normal;
+  font-style: italic;
+  color: #777;
+}
+
+.item-content .body p {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.item-content .actions {
+  width: 60%;
+  height: 6em;
+  background-color: #4A4A4A;
+  margin: -3em auto 5em;
+  text-align: center;
+}
+
+.item-content .actions a {
+  width: 30%;
+  display: inline-block;
+  line-height: 6em;
+}
+
+.time {
+  float: right;
+}
+
+.sender .position {
+  color: #777;
+  font-size: .8em;
+}
+
+.sender .name {
+  font-weight: bold;
+}
+
 /* vim: set sw=2: */
