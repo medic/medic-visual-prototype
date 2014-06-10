@@ -1,0 +1,197 @@
+.row.header {
+  background-color: @medic-slate-color;
+  height: 4.75em;
+  text-align: center;
+
+  .mm-icon {
+    font-size: 2.75em;
+  }
+  
+  .welcome, .logo {
+    float: left;
+    opacity: 0.9;
+    padding: 0.25em 0 0 1.25em;
+  }
+
+  .extras {
+    float: right;
+
+    a {
+      display: inline-block;
+      width: 4em;
+      line-height: 4.5em;
+    }
+  }
+  .tabs {
+    white-space: nowrap;
+
+    a {
+      display: inline-block;
+      margin-top: 0.25em;
+      height: 4.75em;
+      width: 8em;
+      border-radius: 1em 1em 0 0;
+
+      &.selected {
+        background-color: @option-color;
+      }
+    }
+
+    .mm-icon {
+      margin: 0 auto;
+      line-height: 1.5em;
+    }
+  }
+}
+
+.row.filters {
+
+  background-color: @option-color;
+  height: 4.75em;
+  font-size: 0.95em;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  box-shadow: 0 5px 2px -2px #aaa;
+
+  .dropdown {
+    float: left;
+    min-width: 17em;
+    padding-bottom: 0.5em;
+  }
+}
+
+.container {
+  background-color: @background-color;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.row.content {
+  top: 9.5em;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.inbox-items, .item-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.inbox-items {
+  padding: 0;
+  background-color: @form-background-color;
+
+  li {
+    border-bottom: 1px solid @seperator-color;
+    padding: 1em;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.selected, &:hover {
+      background-color: @highlight-color;
+    }
+  }
+
+  .mm-badge-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .detail {
+    display: inline-block;
+  }
+}
+
+.item-content {
+  padding: 1em;
+
+  .meta {
+    padding: 1em 2em 2em;
+  }
+
+  .mm-badge-container {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: -1.25em;
+  }
+
+  .body {
+    background-color: @form-background-color;
+    border: 1px solid @seperator-color;
+    border-radius: 1em;
+    padding-bottom: 4em;
+
+    h2 {
+      margin: 1em;
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    li {
+      border-bottom: 1px solid @seperator-color;
+      padding: 1em 3em 1em 2em;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    label {
+      display: block;
+      margin: 0;
+      font-weight: normal;
+      font-style: italic;
+      color: @label-color;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.4em;
+      margin: 0;
+    }
+  }
+
+  &.incomplete .body h2 {
+    color: @error-color;
+  }
+
+  .actions {
+    width: 60%;
+    height: 6em;
+    background-color: @medic-slate-color;
+    border-radius: 10pt;
+    position: absolute;
+    bottom: 3em;
+    margin: 0 20%;
+    text-align: center;
+
+    a {
+      width: 30%;
+      display: inline-block;
+      line-height: 6em;
+    }
+  }
+}
+
+.time {
+  float: right;
+}
+
+.sender .position {
+  color: @label-color;
+  font-size: .8em;
+}
+
+.sender .name {
+  font-weight: bold;
+}
