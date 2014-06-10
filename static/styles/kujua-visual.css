@@ -281,12 +281,12 @@ body .mm-icon-overlay-before {
 
 .row.header {
   background-color: #494949;
-  height: 5.75em;
+  height: 4.5em;
   text-align: center;
 }
 
 .row.header  .mm-icon {
-  font-size: 3em;
+  font-size: 2.75em;
 }
 
 .row.header .welcome, .row.header .logo {
@@ -300,7 +300,7 @@ body .mm-icon-overlay-before {
 .row.header .extras a {
   display: inline-block;
   width: 4em;
-  line-height: 80px;
+  line-height: 4.5em;
 }
 
 .tabs {
@@ -309,15 +309,15 @@ body .mm-icon-overlay-before {
 
 .row.header .tabs a {
   display: inline-block;
-  margin-top: 5px;
-  height: 75px;
+  margin-top: 0.25em;
+  height: 4.5em;
   width: 8em;
-  border-radius: 5px 5px 0 0;
+  border-radius: 1em 1em 0 0;
 }
 
 .row.header .tabs .mm-icon {
   margin: 0 auto;
-  line-height: 75px;
+  line-height: 1.5em;
 }
 
 .row.header .tabs a.selected, .row.filters {
@@ -347,7 +347,7 @@ body .mm-icon-overlay-before {
 }
 
 .row.content {
-  top: 10.5em;
+  top: 9.25em;
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -405,7 +405,7 @@ body .mm-icon-overlay-before {
 .item-content .body {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 2px;
+  border-radius: 1em;
   padding-bottom: 4em;
 }
 
