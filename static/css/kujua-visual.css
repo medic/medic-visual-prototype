@@ -34,18 +34,18 @@ html, body {
 
 
 /**
- * @name k-badge:
+ * @name mm-badge:
  */
-.k-badge-container, .k-button-container, .k-icon-container {
+.mm-badge-container, .mm-button-container, .mm-icon-container {
   padding: 0.5em;
 }
 
-.k-badge-border {
+.mm-badge-border {
   padding-top: 0.45em;
   padding-bottom: 0.45em;
 }
 
-.k-badge {
+.mm-badge {
   color: #fff;
   text-align: center;
   border-radius: 10em;
@@ -53,37 +53,37 @@ html, body {
   vertical-align: top;
 }
   
-.k-badge-border {
+.mm-badge-border {
   border: solid 0.2em #fff;
 }
 
-body .k-badge-round {
+body .mm-badge-round {
   padding-left: 0;
   padding-right: 0;
 }
 
-.k-badge-round span {
+.mm-badge-round span {
   width: 1.8em;
 }
 
-.k-badge-raise span {
+.mm-badge-raise span {
   line-height: 1.4em;
   vertical-align: top;
 }
 
-.k-badge-red {
+.mm-badge-red {
   background-color: rgb(218, 69, 72);
 }
 
-.k-badge-green {
+.mm-badge-green {
   background-color: rgb(160, 186, 98);
 }
 
 
 /**
- * @name k-button:
+ * @name mm-button:
  */
-.k-button {
+.mm-button {
   width: 100%;
   cursor: pointer;
   min-height: 3em;
@@ -93,12 +93,12 @@ body .k-badge-round {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.k-button-inverse {
+.mm-button-inverse {
   border: solid 1px rgba(255, 255, 255, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 2px;
 }
 
-.k-button-dropdown {
+.mm-button-dropdown {
   color: #333;
   float: right;
   font-size: 0.95em;
@@ -106,11 +106,11 @@ body .k-badge-round {
   cursor: pointer;
 }
 
-.k-button-inverse .k-button-dropdown {
+.mm-button-inverse .mm-button-dropdown {
   color: #eee;
 }
 
-.k-button-icon {
+.mm-button-icon {
   float: left;
   color: #222;
   font-size: 1.5em;
@@ -118,42 +118,42 @@ body .k-badge-round {
   padding: 0.22em 0.75em 0.22em 0.75em;
 }
 
-.k-button-inverse .k-button-icon {
+.mm-button-inverse .mm-button-icon {
   color: #eee;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
 }
 
-.k-button-text {
+.mm-button-text {
   color: #222;
   font-size: 0.9em;
   font-weight: bold;
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px;
 }
 
-.k-button-inverse .k-button-text {
+.mm-button-inverse .mm-button-text {
   color: #eee;
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 1px;
 }
 
-span.k-button-text {
+span.mm-button-text {
   line-height: 3.2em;
   vertical-align: middle;
 }
 
-div.k-button-text {
+div.mm-button-text {
   margin: 0.85em 0 0 0;
 }
 
-body .k-button-nudge .k-button-icon {
+body .mm-button-nudge .mm-button-icon {
   padding-top: 0.28em;
 }
 
 
 /**
- * @name k-icon:
+ * @name mm-icon:
  */
 
-.k-icon {
+.mm-icon {
   width: 1em;
   color: #333;
   cursor: pointer;
@@ -161,12 +161,12 @@ body .k-button-nudge .k-button-icon {
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 2px;
 }
 
-body .k-icon-inverse {
+body .mm-icon-inverse {
   color: #ddd;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
 }
 
-.k-icon-overlay {
+.mm-icon-overlay {
   width: 0;
   height: 0;
   z-index: 100;
@@ -179,35 +179,36 @@ body .k-icon-inverse {
     1px 0 rgba(255, 255, 255, 0.5), 0 -1px rgba(255, 255, 255, 0.5);
 }
 
-body .k-icon-inverse .k-icon-overlay {
+body .mm-icon-inverse .mm-icon-overlay {
   text-shadow:
     -1px 0 rgba(0, 0, 0, 0.5), 0 1px rgba(0, 0, 0, 0.5),
     1px 0 rgba(0, 0, 0, 0.5), 0 -1px rgba(0, 0, 0, 0.5);
 }
 
-.k-icon-overlay, .k-icon-overlay-after {
+.mm-icon-overlay, .mm-icon-overlay-after {
   top: -1em;
   left: 0.75em;
 }
 
-body .k-icon-overlay-before {
+body .mm-icon-overlay-before {
   top: 1.15em;
   left: 0.75em;
 }
 
-.k-icon-overlay-nudge {
+.mm-icon-overlay-nudge {
   line-height: 0.65em;
 }
 
-.k-icon-overlay-nudge-right {
+.mm-icon-overlay-nudge-right {
   padding-left: 0.25em;
 }
 
+
 /**
- * @name k-inverse-box:
+ * @name mm-inverse-box:
  */
 
-.k-inverse-box {
+.mm-inverse-box {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10pt;
 }
