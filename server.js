@@ -5,6 +5,7 @@ var express = require('express'),
     cookie_parser = require('cookie-parser'),
     cookie_session = require('cookie-session'),
     async = require('async'),
+    less = require('less-middleware'),
     app = express();
 
 
@@ -15,6 +16,7 @@ app.use(body_parser());
 app.use(cookie_parser());
 
 app.set('views', __dirname + '/views');
+app.use(less(__dirname + '/static/styles', {force: true}));
 app.use('/static', express.static(__dirname + '/static'));
 
 app.use(cookie_session({
