@@ -216,11 +216,47 @@ body .mm-icon-overlay-before {
 .row.header {
   background-color: #494949;
   height: 80px;
+  text-align: center;
+}
+
+.row.header  .mm-icon {
+  font-size: 3em;
+}
+
+.row.header .welcome, .row.header .logo {
+  float: left;
+}
+
+.row.header .extras {
+  float: right;
+}
+
+.row.header .extras a {
+  display: inline-block;
+  width: 4em;
+  line-height: 80px;
+}
+
+.row.header .tabs a {
+  display: inline-block;
+  margin-top: 5px;
+  height: 75px;
+  width: 8em;
+  border-radius: 5px 5px 0 0;
+}
+
+.row.header .tabs .mm-icon {
+  margin: 0 auto;
+  line-height: 75px;
+}
+
+.row.header .tabs a.selected, .row.filters {
+  background-color: #E0D7AB;
 }
 
 .row.filters {
-  background-color: #E0D7AB;
   height: 60px;
+  box-shadow: 0 5px 2px -2px #AAA;
 }
 
 .container {
@@ -259,12 +295,31 @@ body .mm-icon-overlay-before {
   border-bottom: none;
 }
 
+.inbox-items li.selected, .inbox-items li:hover {
+  background-color: #D8ECF1;
+}
+
+.inbox-items .mm-badge-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inbox-items .detail {
+  display: inline-block;
+}
+
 .item-content {
   padding: 1em;
 }
 
 .item-content .meta {
   padding: 1em 2em 2em;
+}
+
+.item-content .mm-badge-container {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: -1.25em;
 }
 
 .item-content .body {
@@ -277,6 +332,12 @@ body .mm-icon-overlay-before {
 .item-content .body h2 {
   margin: 1em;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.item-content.incomplete .body h2 {
+  color: #E74D4E;
 }
 
 .item-content .body li {
