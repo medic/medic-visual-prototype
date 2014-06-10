@@ -97,13 +97,18 @@ body .mm-badge-round {
   width: 100%;
   cursor: pointer;
   min-height: 3em;
+  overflow: hidden;
   border-radius: 2em;
   border: solid 1px rgba(0, 0, 0, 0.3);
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.mm-button-inverse {
+body .mm-button-bold {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body .mm-button-inverse {
   border: solid 1px rgba(255, 255, 255, 0.2);
   box-shadow: rgba(255, 255, 255, 0.1) 2px 2px 2px;
 }
@@ -137,6 +142,7 @@ body .mm-badge-round {
   color: #222;
   font-size: 0.9em;
   font-weight: bold;
+  padding-right: 3em;
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px;
 }
 
@@ -275,7 +281,7 @@ body .mm-icon-overlay-before {
 
 .row.header {
   background-color: #494949;
-  height: 80px;
+  height: 5.75em;
   text-align: center;
 }
 
@@ -319,8 +325,18 @@ body .mm-icon-overlay-before {
 }
 
 .row.filters {
-  height: 60px;
+  z-index: 1000;
+  height: 4.75em;
+  overflow: hidden;
+  font-size: 0.95em;
+  padding: 0.5em 1em;
+  white-space: nowrap;
   box-shadow: 0 5px 2px -2px #AAA;
+}
+
+.filters .dropdown {
+  float: left;
+  min-width: 17em;
 }
 
 .container {
@@ -333,7 +349,7 @@ body .mm-icon-overlay-before {
 }
 
 .row.content {
-  top: 140px;
+  top: 10.5em;
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -347,6 +363,7 @@ body .mm-icon-overlay-before {
 
 .inbox-items {
   padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .inbox-items li {
@@ -431,9 +448,11 @@ body .mm-icon-overlay-before {
 .item-content .actions {
   width: 60%;
   height: 6em;
-  background-color: #4a4a4a;
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 10pt;
-  margin: -3em auto 5em;
+  position: absolute;
+  bottom: 3em;
+  margin: 0 20%;
   text-align: center;
 }
 
