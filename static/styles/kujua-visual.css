@@ -227,6 +227,11 @@ body .mm-icon-inverse {
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
 }
 
+body .mm-icon-nudge-down {
+  position: relative;
+  top: 0.1em;
+}
+
 .mm-icon-overlay {
   width: 0;
   height: 0;
@@ -281,7 +286,7 @@ body .mm-icon-overlay-before {
 
 .row.header {
   background-color: #494949;
-  height: 4.5em;
+  height: 4.75em;
   text-align: center;
 }
 
@@ -291,6 +296,8 @@ body .mm-icon-overlay-before {
 
 .row.header .welcome, .row.header .logo {
   float: left;
+  opacity: 0.9;
+  padding: 0.25em 0 0 1.25em;
 }
 
 .row.header .extras {
