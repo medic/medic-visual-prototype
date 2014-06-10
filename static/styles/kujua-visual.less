@@ -3,7 +3,7 @@ html, body {
   height: 100%;
 }
 
-.app {
+.prototype {
   height: 100%;
   width: 100%;
   font-size: 11pt;
@@ -101,16 +101,13 @@ body .mm-badge-round {
   border-radius: 2em;
   border: solid 1px rgba(0, 0, 0, 0.3);
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-body .mm-button-bold {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 body .mm-button-inverse {
-  border: solid 1px rgba(255, 255, 255, 0.2);
-  box-shadow: rgba(255, 255, 255, 0.1) 2px 2px 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(255, 255, 255, 0.15) 2px 2px 2px;
 }
 
 .mm-button-dropdown {
@@ -170,8 +167,14 @@ body .mm-button-nudge .mm-button-icon {
   opacity: 0.5 !important;
 }
 
-.mm-button-disabled {
+body .mm-button-disabled {
   cursor: auto !important;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+body .mm-button-disabled.mm-button-inverse {
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 
@@ -481,4 +484,4 @@ body .mm-icon-overlay-before {
   font-weight: bold;
 }
 
-/* vim: set sw=2: */
+/* vim: set sw=2 filetype=css: */
