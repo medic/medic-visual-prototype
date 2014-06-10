@@ -35,6 +35,7 @@ app.get('/', function (req, res) {
 app.get('/inbox', function (req, res) {
 
   res.render('index.hbs', {
+    title: 'Inbox: Kujua Visual Layer'
   });
 });
 
@@ -44,6 +45,7 @@ app.get('/inbox', function (req, res) {
 app.get('/components', function (req, res) {
 
   res.render('components.hbs', {
+    title: 'Contact Sheet: Kujua Visual Layer'
   });
 });
 
