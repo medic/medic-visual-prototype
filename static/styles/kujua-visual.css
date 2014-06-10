@@ -297,6 +297,10 @@ body .mm-icon-overlay-before {
   line-height: 80px;
 }
 
+.tabs {
+  white-space: nowrap;
+}
+
 .row.header .tabs a {
   display: inline-block;
   margin-top: 5px;
@@ -349,6 +353,7 @@ body .mm-icon-overlay-before {
   border-bottom: 1px solid #e0e0e0;
   padding: 1em;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .inbox-items li:last-child {
