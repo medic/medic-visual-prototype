@@ -258,6 +258,11 @@ body .mm-icon-overlay-before {
   border-radius: 10pt;
 }
 
+
+/**
+ * @name medic-inbox:
+ */
+
 .row.header {
   background-color: #494949;
   height: 80px;
