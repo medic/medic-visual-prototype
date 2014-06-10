@@ -317,7 +317,7 @@ body .mm-icon-overlay-before {
 .row.header .tabs a {
   display: inline-block;
   margin-top: 0.25em;
-  height: 4.5em;
+  height: 4.75em;
   width: 8em;
   border-radius: 1em 1em 0 0;
 }
@@ -336,12 +336,13 @@ body .mm-icon-overlay-before {
   font-size: 0.95em;
   padding: 0.5em 1em;
   white-space: nowrap;
-  box-shadow: 0 5px 2px -2px #AAA;
+  box-shadow: 0 5px 2px -2px #aaa;
 }
 
 .filters .dropdown {
   float: left;
   min-width: 17em;
+  padding-bottom: 0.5em;
 }
 
 .container {
@@ -354,7 +355,7 @@ body .mm-icon-overlay-before {
 }
 
 .row.content {
-  top: 9.25em;
+  top: 9.5em;
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -368,7 +369,7 @@ body .mm-icon-overlay-before {
 
 .inbox-items {
   padding: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(250, 250, 250);
 }
 
 .inbox-items li {
