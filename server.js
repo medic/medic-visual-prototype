@@ -16,8 +16,8 @@ app.use(body_parser());
 app.use(cookie_parser());
 
 app.set('views', __dirname + '/views');
-app.use(less(__dirname + '/static/styles', {force: true}));
-app.use('/static', express.static(__dirname + '/static'));
+app.use(less(__dirname + '/static', {force: true}));
+app.use(express.static(__dirname + '/static'));
 
 app.use(cookie_session({
   secret: '2f6f99e7102059d7acb40bbe4fa8cf547ea18f96'
