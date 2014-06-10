@@ -234,8 +234,42 @@
   </div>
 
   <div style="float: left;">
+
+    <div class="dropdown">
+      <div id="d1" class="mm-button-container" data-toggle="dropdown">
+        <div class="mm-button mm-button-nudge">
+          <div class="mm-button-icon">
+            <span class="fa fa-list-alt"></span>
+          </div>
+          <div class="mm-button-dropdown">
+            <span class="fa fa-chevron-down"></span>
+          </div>
+          <div class="mm-button-text">
+            Antenatal Care Report
+          </div>
+        </div>
+      </div>
+
+      <ul role="menu" aria-labelledby="d1"
+        class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
+
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Prenatal Care</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Antenatal Care</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Disease Surveillance</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Stock Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="mm-button-container">
-      <div class="mm-button">
+      <div class="mm-button mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-calendar"></span>
         </div>
@@ -249,21 +283,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button mm-button-nudge">
-        <div class="mm-button-icon">
-          <span class="fa fa-list-alt"></span>
-        </div>
-        <div class="mm-button-dropdown">
-          <span class="fa fa-chevron-down"></span>
-        </div>
-        <div class="mm-button-text">
-          Antenatal Care Report
-        </div>
-      </div>
-    </div>
-
-    <div class="mm-button-container">
-      <div class="mm-button mm-button">
+      <div class="mm-button mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-medkit"></span>
         </div>
@@ -277,7 +297,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button mm-button-nudge">
+      <div class="mm-button mm-button-disabled mm-button-nudge">
         <div class="mm-button-icon">
           <span class="fa fa-navicon"></span>
         </div>
@@ -291,7 +311,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button">
+      <div class="mm-button mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-home"></span>
         </div>
@@ -446,8 +466,41 @@
   <div class="float-separator" style="width: 6em;"></div>
 
   <div class="mm-inverse-box" style="float: left; padding: 1em;">
+
+    <div class="dropdown">
+      <div id="d2" class="mm-button-container" data-toggle="dropdown">
+        <div class="mm-button mm-button-inverse mm-button-nudge">
+          <div class="mm-button-icon">
+            <span class="fa fa-list-alt"></span>
+          </div>
+          <div class="mm-button-dropdown">
+            <span class="fa fa-chevron-down"></span>
+          </div>
+          <div class="mm-button-text">
+            Antenatal Care Report
+          </div>
+        </div>
+      </div>
+
+      <ul role="menu" aria-labelledby="d2" class="dropdown-menu mm-dropdown-menu">
+
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Prenatal Care</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Antenatal Care</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Disease Surveillance</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="#">Stock Monitoring</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="mm-button-container">
-      <div class="mm-button mm-button-inverse">
+      <div class="mm-button mm-button-inverse mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-calendar"></span>
         </div>
@@ -461,21 +514,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button mm-button-inverse mm-button-nudge">
-        <div class="mm-button-icon">
-          <span class="fa fa-list-alt"></span>
-        </div>
-        <div class="mm-button-dropdown">
-          <span class="fa fa-chevron-down"></span>
-        </div>
-        <div class="mm-button-text">
-          Antenatal Care Report
-        </div>
-      </div>
-    </div>
-
-    <div class="mm-button-container">
-      <div class="mm-button mm-button-inverse">
+      <div class="mm-button mm-button-inverse mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-medkit"></span>
         </div>
@@ -489,7 +528,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button mm-button-inverse mm-button-nudge">
+      <div class="mm-button mm-button-inverse mm-button-disabled mm-button-nudge">
         <div class="mm-button-icon">
           <span class="fa fa-navicon"></span>
         </div>
@@ -503,7 +542,7 @@
     </div>
 
     <div class="mm-button-container">
-      <div class="mm-button mm-button-inverse">
+      <div class="mm-button mm-button-inverse mm-button-disabled">
         <div class="mm-button-icon">
           <span class="fa fa-home"></span>
         </div>
@@ -518,5 +557,12 @@
   </div>
 
 </div>
+
+<script language="javascript">
+  jQuery(function ($) {
+    $('#d1').dropdown();
+    $('#d2').dropdown();
+  });
+</script>
 
 <!-- vim: set sw=2: -->
