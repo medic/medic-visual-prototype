@@ -10,6 +10,7 @@
     "body-parser": "1.x",
     "connect-flash": "0.x",
     "cookie-parser": "1.x",
-    "cookie-session": "1.x"
+    "cookie-session": "1.x",
+    "less-middleware": "1.x"
   }
 }
