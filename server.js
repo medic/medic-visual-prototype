@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
  */
 app.get('/inbox', function (req, res) {
 
-  res.render('index.hbs', {
+  res.render('inbox.hbs', {
     title: 'Inbox: Kujua Visual Layer'
   });
 });

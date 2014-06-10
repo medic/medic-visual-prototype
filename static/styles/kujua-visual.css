@@ -432,6 +432,7 @@ body .mm-icon-overlay-before {
   width: 60%;
   height: 6em;
   background-color: #4a4a4a;
+  border-radius: 10pt;
   margin: -3em auto 5em;
   text-align: center;
 }
