@@ -325,9 +325,7 @@ body .mm-icon-overlay-before {
 }
 
 .row.filters {
-  z-index: 1000;
   height: 4.75em;
-  overflow: hidden;
   font-size: 0.95em;
   padding: 0.5em 1em;
   white-space: nowrap;
