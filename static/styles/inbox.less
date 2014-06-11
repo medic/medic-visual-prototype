@@ -1,3 +1,8 @@
+.row .inner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .row.header {
   background-color: @medic-slate-color;
   height: 4.75em;
@@ -60,7 +65,7 @@
   }
 }
 
-.container {
+.container-fluid {
   background-color: @background-color;
   position: absolute;
   top: 0;
@@ -69,11 +74,12 @@
   right: 0;
 }
 
-.row.content {
+.row.content .inbox {
   top: 9.5em;
   bottom: 0;
   position: absolute;
   width: 100%;
+  max-width: 1170px;
 }
 
 .inbox-items, .item-content {
@@ -85,6 +91,7 @@
 .inbox-items {
   padding: 0;
   background-color: @form-background-color;
+  border-left: 1px solid @seperator-color;
 
   li {
     border-bottom: 1px solid @seperator-color;
