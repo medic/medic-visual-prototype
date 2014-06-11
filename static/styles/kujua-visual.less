@@ -188,7 +188,7 @@ body .mm-button-disabled.mm-button-inverse {
 .mm-dropdown-menu {
   right: 0;
   margin: 3.87em 2em;
-  padding: 1.5em 0;
+  padding: 1em 0;
   top: 0;
   font-size: 0.9em;
   position: absolute;
@@ -242,8 +242,9 @@ body .mm-dropdown-menu-inverse li a:hover {
     left: 2em;
     right: 2em;
     display: block;
-    font-size: 1.25em;
     padding: 2em 1em;
+    font-size: 1.25em;
+    border-width: 1px;
     border-radius: 7pt;
 
     li a, li:first-child a, li:last-child a {
@@ -253,6 +254,11 @@ body .mm-dropdown-menu-inverse li a:hover {
 
     li a:hover {
       border-radius: 3pt;
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  .open .mm-dropdown-menu-inverse {
+    li a:hover {
       background-color: rgba(255, 255, 255, 0.85);
     }
   }
