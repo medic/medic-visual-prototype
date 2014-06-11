@@ -44,10 +44,10 @@ app.get('/inbox', function (req, res) {
 
 /**
  */
-app.get('/components', function (req, res) {
+app.get('/prototype', function (req, res) {
 
-  res.render('components.hbs', {
-    title: 'Contact Sheet: Kujua Visual Layer'
+  res.render('prototype.hbs', {
+    title: 'Prototype Contact Sheet: Kujua Visual Layer'
   });
 });
 
