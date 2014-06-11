@@ -33,10 +33,12 @@
     }
   }
   .tabs {
+    overflow: hidden;
     white-space: nowrap;
 
     a {
-      display: inline-block;
+      float: left;
+      display: block;
       margin-top: 0.25em;
       height: 4.75em;
       width: 8em;
@@ -45,11 +47,14 @@
       &.selected {
         background-color: @option-color;
       }
+
+      &.first {
+        margin-left: 20%;
+      }
     }
 
     .mm-icon {
       margin: 0 auto;
-      line-height: 1.5em;
     }
   }
 }
