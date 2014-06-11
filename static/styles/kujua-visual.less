@@ -225,6 +225,29 @@ body .mm-dropdown-menu-inverse li a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .open .mm-dropdown-menu {
+    top: 7em;
+    margin: 0;
+    position: fixed;
+    left: 2em;
+    right: 2em;
+    display: block;
+    font-size: 1.75em;
+    padding: 2em;
+    border-radius: 10pt;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    li a, li:first-child a, li:last-child a {
+      padding: 0.5em 1em;
+    }
+
+    li a:hover {
+      border-radius: 10pt;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
 
 
 /**
