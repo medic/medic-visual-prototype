@@ -94,6 +94,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
+  background-color: @background-color;
 }
 
 .inbox-items {
@@ -216,6 +217,9 @@
 }
 
 @media (max-width: 767px) {
+  .inbox {
+    top: 6.75em !important;
+  }
   .row.header {
     font-size: 0.6em;
   }
@@ -235,9 +239,9 @@
     .inbox-items, .item-content {
       position: absolute;
       width: 100%;
-      -webkit-transition: left 300ms ease 0s;
-      -moz-transition: left 300ms ease 0s;
-      transition: left 300ms ease 0s;
+      -webkit-transition: left 500ms ease 0s;
+      -moz-transition: left 500ms ease 0s;
+      transition: left 500ms ease 0s;
     }
     .inbox-items {
       left: 0;
