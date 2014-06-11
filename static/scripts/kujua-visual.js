@@ -1,5 +1,7 @@
-$(function() {
-  $('.inbox-items').on('click', 'li', function(e) {
+
+$(function () {
+
+  $('.inbox-items').on('click', 'li', function (e) {
     e.preventDefault();
     var elem = $(this);
     if (!elem.is('selected')) {
@@ -9,8 +11,11 @@ $(function() {
       $('.row.content').addClass('show-body');
     }
   });
-  $('.slide-back').on('click', function(e) {
+
+  $('.slide-back').on('click', function (e) {
     e.preventDefault();
     $('.row.content').removeClass('show-body');
   });
+
 });
+
