@@ -13,7 +13,7 @@ html, body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Lato';
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(100, 100, 100);
 }
 
 .float-separator {
@@ -93,6 +93,7 @@ body .mm-badge-round {
   cursor: pointer;
   min-height: 3em;
   overflow: hidden;
+  padding-left: 1em;
   border-radius: 1.35em;
   border: solid 1px rgba(0, 0, 0, 0.3);
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
@@ -101,7 +102,7 @@ body .mm-badge-round {
 
 body .mm-button-inverse {
   background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.1);
   box-shadow: rgba(255, 255, 255, 0.1) 2px 2px 2px;
 }
 
@@ -132,7 +133,7 @@ body .mm-button-inverse {
   color: #222;
   font-size: 1.5em;
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px;
-  padding: 0.22em 0.35em 0.22em 0.75em;
+  padding: 0.22em 0.5em 0.22em 0;
 }
 
 .mm-button-text {
@@ -149,11 +150,12 @@ span.mm-button-text {
 }
 
 div.mm-button-text {
-  margin: 0.85em 0 0 0;
+  padding: 0.95em 0 0 0;
 }
 
-body .mm-button-nudge .mm-button-icon {
-  padding-top: 0.28em;
+body .mm-button-nudge-down .mm-button-icon {
+  position: relative;
+  top: 0.1em;
 }
 
 .mm-button-disabled .mm-button-text,
@@ -271,14 +273,17 @@ body .mm-icon-nudge-down {
   top: 0.1em;
 }
 
-.mm-icon-overlay {
+.mm-icon-overlay, .mm-badge-overlay {
   width: 0;
   height: 0;
   z-index: 100;
-  font-size: 0.65em;
-  display: block;
   overflow: visible;
   position: relative;
+}
+
+.mm-icon-overlay {
+  font-size: 0.65em;
+  display: block;
   text-shadow:
     -1px 0 rgba(255, 255, 255, 0.5), 0 1px rgba(255, 255, 255, 0.5),
     1px 0 rgba(255, 255, 255, 0.5), 0 -1px rgba(255, 255, 255, 0.5);
@@ -291,7 +296,7 @@ body .mm-icon-inverse .mm-icon-overlay {
 }
 
 .mm-icon-overlay, .mm-icon-overlay-after {
-  top: -1em;
+  top: -1.15em;
   left: 0.75em;
 }
 
@@ -300,12 +305,22 @@ body .mm-icon-overlay-before {
   left: 0.75em;
 }
 
-.mm-icon-overlay-nudge {
-  line-height: 0.65em;
+.mm-badge-overlay {
+  font-size: 0.25em;
+  top: -2em;
+  right: -2em;
 }
 
-.mm-icon-overlay-nudge-right {
-  padding-left: 0.25em;
+body .mm-badge-overlay-top {
+  top: -5em;
+}
+
+.mm-badge-overlay-nudge-right {
+  right: -2.75em;
+}
+
+.mm-badge-overlay-nudge-left {
+  right: -1.25em;
 }
 
 
