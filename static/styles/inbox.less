@@ -264,6 +264,10 @@ body .slide-back .mm-button-text {
 }
 
 @media (max-width: 767px) {
+  /* Hover fires incorrectly on touch devices */
+  .inbox-items li:hover {
+    background-color: inherit;
+  }
   .row.header {
     font-size: 0.6em;
   }
