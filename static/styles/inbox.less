@@ -151,7 +151,7 @@
   .body {
     background-color: @form-background-color;
     border: 1px solid @seperator-color;
-    border-radius: 0.25em;
+    border-radius: @radius-size;
 
     h2 {
       margin: 1em;
@@ -191,9 +191,8 @@
   .actions {
     height: 5em;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0 0 10px 10px;
-    bottom: 2.5em;
-    max-width: 37.5em;
+    border-radius: 0 0 @radius-size @radius-size;
+    max-width: 30em;
     text-align: center;
     margin: 0 auto 2em;
 
@@ -238,9 +237,6 @@
   .inbox {
     top: 6.75em !important;
   }
-  .actions {
-    display: none;
-  }
   .row.header {
     font-size: 0.6em;
   }
@@ -269,6 +265,9 @@
     }
     .item-content {
       left: 100%;
+      .body {
+        border-radius: @radius-size @radius-size 0 0;
+      }
     }
   }
   .row.content.show-body .inbox-items {
