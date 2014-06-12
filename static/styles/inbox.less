@@ -252,8 +252,15 @@ body .slide-back {
 }
 
 body .slide-back .mm-button-text {
-  visibility: visible !important;
   margin: 0;
+}
+
+@media (min-width: 385px) {
+  .row.filters .slide-back .mm-button-text {
+    width: auto;
+    visibility: visible;
+    padding-right: 1.75em;
+  }
 }
 
 @media (max-width: 767px) {
@@ -267,8 +274,9 @@ body .slide-back .mm-button-text {
       text-align: left;
     }
     .mm-button-text {
+      width: 0;
       visibility: hidden;
-      padding-right: 1.75em;
+      padding-right: 0.75em;
     }
     .dropdown {
       width: 7em;
