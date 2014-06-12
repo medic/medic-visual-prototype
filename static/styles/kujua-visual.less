@@ -27,18 +27,10 @@ html, body {
   clear: both;
 }
 
-.mm-badge-container, .mm-button-container, .mm-icon-container {
-  padding: 0.5em;
-}
-
 
 /**
 * @name mm-badge:
 */
-
-.mm-badge-container {
-  min-width: 3.5em; /* Webkit */
-}
 
 .mm-badge-border {
   padding-top: 0.45em;
@@ -46,11 +38,13 @@ html, body {
 }
 
 .mm-badge {
-  color: #fff;
+  color: #FFF;
   text-align: center;
   border-radius: 10em;
-  padding: 0.3em 0.6em 0.3em 0.6em;
+  padding: 0.2em 0.6em;
   vertical-align: top;
+  display: inline-block;
+  margin: 0.2em;
 }
 
 div.mm-badge {
@@ -89,7 +83,7 @@ body .mm-badge-round {
 * @name mm-button:
 */
 .mm-button {
-  width: 100%;
+  display: inline-block;
   cursor: pointer;
   min-height: 3em;
   overflow: hidden;
@@ -104,6 +98,10 @@ body .mm-button-inverse {
   background-color: rgba(255, 255, 255, 0.2);
   border: solid 1px rgba(255, 255, 255, 0.1);
   box-shadow: rgba(255, 255, 255, 0.1) 2px 2px 2px;
+}
+
+.mm-dropdown {
+  display: inline-block;
 }
 
 .mm-button-dropdown {
@@ -181,7 +179,7 @@ body .mm-button-disabled.mm-button-inverse {
 
 .mm-dropdown-menu {
   right: 0;
-  margin: 3.87em 2em;
+  margin: 3.35em 2em;
   padding: 1em 0;
   top: 0;
   font-size: 0.9em;
@@ -261,6 +259,7 @@ body .mm-dropdown-menu-inverse li a:hover {
   cursor: pointer;
   text-align: center;
   text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 2px;
+  position: relative;
 }
 
 body .mm-icon-inverse {
@@ -274,23 +273,19 @@ body .mm-icon-nudge-down {
 }
 
 .mm-icon-caption {
-  display: block;
   font-weight: bold;
   font-size: 0.8em;
   line-height: 2em;
 }
 
 .mm-icon-overlay, .mm-badge-overlay {
-  width: 0;
-  height: 0;
-  z-index: 100;
   overflow: visible;
-  position: relative;
+  position: absolute;
+  z-index: 100;
 }
 
 .mm-icon-overlay {
   font-size: 0.65em;
-  display: block;
   text-shadow:
     -1px 0 rgba(255, 255, 255, 0.5), 0 1px rgba(255, 255, 255, 0.5),
     1px 0 rgba(255, 255, 255, 0.5), 0 -1px rgba(255, 255, 255, 0.5);
@@ -303,31 +298,20 @@ body .mm-icon-inverse .mm-icon-overlay {
 }
 
 .mm-icon-overlay, .mm-icon-overlay-after {
-  top: -1.15em;
-  left: 0.75em;
+  bottom: 0;
+  right: 0;
 }
 
-body .mm-icon-overlay-before {
-  top: 1.15em;
-  left: 0.75em;
-}
 
 .mm-badge-overlay {
   font-size: 0.265em;
-  top: -2em;
-  right: -2em;
+  margin: 0px;
+  bottom: -0.5em;
+  right: -0.5em;
 }
 
 body .mm-badge-overlay-top {
-  top: -5em;
-}
-
-.mm-badge-overlay-nudge-right {
-  right: -2.75em;
-}
-
-.mm-badge-overlay-nudge-left {
-  right: -1.25em;
+  top: 0;
 }
 
 
