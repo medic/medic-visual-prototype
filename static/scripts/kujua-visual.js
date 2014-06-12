@@ -17,5 +17,21 @@ $(function () {
     $('.row.content').removeClass('show-body');
   });
 
+  $('.row.header .tabs').on('click', 'a', function (e) {
+    e.preventDefault();
+    var elem = $(this);
+    if (!elem.is('selected')) {
+      $('.row.header .tabs .selected')
+        .removeClass('selected')
+        .find('.mm-icon')
+        .addClass('mm-icon-inverse');
+      elem
+        .addClass('selected')
+        .find('.mm-icon')
+        .removeClass('mm-icon-inverse');
+
+    }
+  });
+
 });
 
