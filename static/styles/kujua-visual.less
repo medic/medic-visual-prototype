@@ -18,7 +18,7 @@ html, body {
 
 .float-separator {
   float: left;
-  width: 2em;
+  width: 0.5em;
   height: 1em;
   clear: none;
 }
@@ -38,13 +38,18 @@ html, body {
 }
 
 .mm-badge {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   border-radius: 10em;
   padding: 0.2em 0.6em;
   vertical-align: top;
   display: inline-block;
   margin: 0.2em;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
+
+  .fa {
+    text-shadow: none;
+  }
 }
 
 div.mm-badge {
@@ -272,6 +277,11 @@ body .mm-icon-nudge-down {
   top: 0.1em;
 }
 
+body .mm-icon-nudge-left {
+  position: relative;
+  right: 0.15em;
+}
+
 .mm-icon-caption {
   font-weight: bold;
   font-size: 0.8em;
@@ -298,22 +308,31 @@ body .mm-icon-inverse .mm-icon-overlay {
 }
 
 .mm-icon-overlay, .mm-icon-overlay-after {
-  bottom: 0;
-  right: 0;
+  bottom: -0.15em;
+  right: -0.15em;
 }
 
 
 .mm-badge-overlay {
-  font-size: 0.265em;
-  margin: 0px;
+  font-size: 0.2575em;
+  margin: 0;
   bottom: -0.5em;
-  right: -0.5em;
+  right: -0.85em;
 }
 
 body .mm-badge-overlay-top {
   top: 0;
 }
 
+body .mm-badge-nudge-left {
+  position: relative;
+  left: -0.5em;
+}
+
+body .mm-badge-nudge-right {
+  position: relative;
+  left: 0.5em;
+}
 
 /**
 * @name mm-inverse-box:

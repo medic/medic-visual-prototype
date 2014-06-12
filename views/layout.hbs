@@ -13,6 +13,10 @@
       href="/styles/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css"
       href="/styles/kujua-visual.css" />
+    {{#each styles}}
+      <link rel="stylesheet"
+        type="text/css" href="/styles/{{this}}.css" />
+    {{/each}}
     <script type="text/javascript"
       src="/scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript"

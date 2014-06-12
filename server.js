@@ -47,6 +47,7 @@ app.get('/inbox', function (req, res) {
 app.get('/prototype', function (req, res) {
 
   res.render('prototype.hbs', {
+    styles: [ 'prototype' ],
     title: 'Prototype Contact Sheet: Kujua Visual Layer'
   });
 });
