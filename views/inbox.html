@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html ng-app="inboxApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/kujua-visual.css" />
+
+    <script type="text/javascript" src="/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/scripts/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/controllers.js"></script>
+    <script type="text/javascript" src="/scripts/kujua-visual.js"></script>
+    <title></title>
+  </head>
+  <body ng-controller="MessageCtrl">
+    <div class="container-fluid">
+      <div class="row header">
+        <div class="inner">
+
+          <a href="">
+            <div class="logo">
+              <img alt="Medic" src="/images/medic-logo-light.svg" />
+            </div>
+          </a>
+
+          <div class="welcome">
+            <div class="title">
+              <!-- INBOX -->
+            </div>
+            <div class="user">
+              <!-- Welcome, Human -->
+            </div>
+          </div>
+
+          <div class="extras">
+            <a href="#">
+              <div class="mm-icon mm-icon-inverse">
+                <span class="fa fa-edit"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="mm-icon mm-icon-inverse">
+                <span class="fa fa-search"></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="tabs">
+            <a href="#">
+              <span class="mm-icon mm-icon-inverse">
+                <span class="fa fa-envelope"></span>
+                <span class="mm-badge-overlay mm-badge-overlay-top">
+                  <span class="mm-badge mm-badge-red mm-badge-border">405</span>
+                </span>
+              </span>
+            </a>
+            <a href="#" class="selected">
+              <span class="mm-icon mm-icon-nudge-down">
+                <span class="fa fa-list-alt"></span>
+              </span>
+            </a>
+            <a href="#">
+              <span class="mm-icon mm-icon-inverse">
+                <span class="fa fa-asterisk"></span>
+              </span>
+            </a>
+            <a href="#">
+              <span class="mm-icon mm-icon-inverse">
+                <span class="fa fa-bar-chart-o"></span>
+                <span class="mm-badge-overlay">
+                  <span class="mm-badge mm-badge-red mm-badge-border mm-badge-nudge-right">5</span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row filters">
+        <div class="inner">
+
+          <span class="dropdown mm-dropdown slide-back">
+            <span id="back" class="mm-button mm-button-disabled mm-button-nudge-down">
+              <span class="mm-button-icon">
+                <span class="fa fa-chevron-left"></span>
+              </span>
+              <span class="mm-button-text">
+                Back
+              </span>
+            </span>
+          </span>
+
+          <span class="dropdown mm-dropdown">
+            <span id="form_type" class="mm-button mm-button-nudge-down" data-toggle="dropdown">
+              <span class="mm-button-icon">
+                <span class="fa fa-list-alt"></span>
+              </span>
+              <span class="mm-button-dropdown">
+                <span class="fa fa-chevron-down"></span>
+              </span>
+              <span class="mm-button-text">
+                Antenatal Care Report
+              </span>
+            </span>
+            <ul role="menu" aria-labelledby="report"
+              class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
+
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Prenatal Care</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Antenatal Care</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Disease Surveillance</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Stock Monitoring</a>
+              </li>
+            </ul>
+          </span>
+
+          <span class="dropdown mm-dropdown">
+            <span id="facility" class="mm-button" data-toggle="dropdown">
+              <span class="mm-button-icon">
+                <span class="fa fa-hospital-o"></span>
+              </span>
+              <span class="mm-button-dropdown">
+                <span class="fa fa-chevron-down"></span>
+              </span>
+              <span class="mm-button-text">
+                Ganze Health Clinic
+              </span>
+            </span>
+            <ul role="menu" aria-labelledby="facility"
+              class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
+
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Chicago General Hospital</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Ganze Health Clinic</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Portland Intensive Care</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Toronto Urgent Care</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Zanzibar Health Post</a>
+              </li>
+            </ul>
+          </span>
+
+          <span class="dropdown mm-dropdown">
+            <span id="date" class="mm-button" data-date="2014-02-02" data-date-format="yyyy-mm-dd">
+              <span class="mm-button-icon">
+                <span class="fa fa-calendar"></span>
+              </span>
+              <span class="mm-button-dropdown">
+                <span class="fa fa-chevron-down"></span>
+              </span>
+              <span class="mm-button-text">
+                2nd Feb, 2014
+              </span>
+            </span>
+          </span>
+
+          <span class="dropdown mm-dropdown">
+            <span id="status" class="mm-button" data-toggle="dropdown">
+              <span class="mm-button-icon">
+                <span class="fa fa-check-circle-o"></span>
+              </span>
+              <span class="mm-button-dropdown">
+                <span class="fa fa-chevron-down"></span>
+              </span>
+              <span class="mm-button-text">
+                Valid Only
+              </span>
+            </span>
+            <ul role="menu" aria-labelledby="status"
+              class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Any</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Valid</a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Invalid</a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+
+      <div class="row content">
+        <div class="inner">
+          <div class="inbox">
+            <div class="col-sm-4 inbox-items">
+              <ul>
+                <li ng-repeat="message in messages" ng-click="setMessage(message.id)">
+                  <span class="time">{{message.time}}</span>
+                  <span ng-switch on="message.status">
+                    <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-border mm-badge-red">
+                      <span class="fa fa-exclamation"></span>
+                    </span>
+                    <span ng-switch-when="good" class="mm-badge mm-badge-round mm-badge-border mm-badge-green">
+                      <span class="fa fa-check"></span>
+                    </span>
+                    <span ng-switch-default class="mm-badge mm-badge-round mm-badge-border mm-badge-green">
+                      <span class="fa"></span>
+                    </span>
+                  </span>
+                  <div class="detail">
+                    <div class="sender">
+                      <div class="name">{{message.sender.name}}</div>
+                      <div class="position">
+                        {{message.sender.role}}, {{message.sender.clinic}}
+                      </div>
+                    </div>
+                    <div>{{message.type}}</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-8 item-content {{selected.status}}">
+              <div ng-show="selected">
+                <div class="meta">
+                  <span class="time">{{selected.time}}</span>
+                  <div class="sender">
+                    <div class="name">{{selected.sender.name}}</div>
+                    <div class="position">{{selected.sender.role}}, {{selected.sender.clinic}}</div>
+                  </div>
+                </div>
+                <div class="status">
+                  <span ng-switch on="selected.status">
+                    <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-red">
+                      <span class="fa fa-exclamation"></span>
+                    </span>
+                    <span ng-switch-when="good" class="mm-badge mm-badge-round mm-badge-green">
+                      <span class="fa fa-check"></span>
+                    </span>
+                    <span ng-switch-default class="mm-badge mm-badge-round mm-badge-green">
+                      <span class="fa"></span>
+                    </span>
+                  </span>
+                </div>
+                <div class="body">
+                  <h2>{{selected.type}}</h2>
+                  <ul>
+                    <li>
+                      <label>Patient ID</label>
+                      <p>548912254</p>
+                    </li>
+                    <li>
+                      <label>Days Since Delivery</label>
+                      <p>5</p>
+                    </li>
+                    <li class="missing">
+                      <label>Physician Present?</label>
+                      <p>Not Recorded</p>
+                    </li>
+                    <li>
+                      <label>Date of Delivery</label>
+                      <p>June 7<sup>th</sup>, 2014</p>
+                    </li>
+                    <li>
+                      <label>Misoprostol Administered?</label>
+                      <p>Yes</p>
+                    </li>
+                    <li>
+                      <label>Birth Outcome</label>
+                      <p>Alive and well</p>
+                    </li>
+                    <li>
+                      <label>Date Submitted</label>
+                      <p>June 12<sup>th</sup>, 2014</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="actions">
+                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                    <span class="fa fa-mail-reply"></span>
+                    <p>Reply</p>
+                  </a>
+                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                    <span class="fa fa-pencil"></span>
+                    <p>Edit</p>
+                  </a>
+                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                    <span class="fa fa-check-circle-o"></span>
+                    <p>Verify</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
