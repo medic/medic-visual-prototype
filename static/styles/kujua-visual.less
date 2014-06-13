@@ -210,24 +210,38 @@ body .mm-button-disabled.mm-button-inverse {
     }
   }
 
+  &.datepicker {
+    right: inherit;
+    margin-top: 0;
+    padding: 1em;
+  }
+
 }
 
-body .mm-dropdown-menu-inverse li a:hover {
+.mm-dropdown-menu-inverse li a:hover, 
+.datepicker td.day:hover,
+.datepicker thead tr:first-child th:hover,
+.datepicker.mm-dropdown-menu-inverse td.active,
+.datepicker.mm-dropdown-menu-inverse td.active:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.8);
+  background-image: none;
 }
 
 .mm-dropdown-menu-inverse {
   background-color: rgba(0, 0, 0, 0.85);
   border-color: rgba(255, 255, 255, 0.25);
-
-  li a {
+  &, li a {
     color: #fff;
   }
 }
 
 @media (max-width: 767px) {
-  .open .mm-dropdown-menu {
+  .open .mm-dropdown-menu, .datepicker.mm-dropdown-menu {
+    border-radius: 7pt;
+  }
+  
+  .open .mm-dropdown-menu {    
     top: 9em;
     margin: 0;
     position: fixed;
@@ -237,7 +251,6 @@ body .mm-dropdown-menu-inverse li a:hover {
     padding: 2em 1em;
     font-size: 1.25em;
     border-width: 1px;
-    border-radius: 7pt;
 
     li a, li:first-child a, li:last-child a {
       padding: 0.5em 1em;

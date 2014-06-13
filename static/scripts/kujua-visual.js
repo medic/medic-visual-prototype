@@ -41,13 +41,16 @@ $(function () {
       $('#date').datepicker('hide');
     })
     .on('show', function(ev) {
-      // todo only on mobile
+      $('.dropdown.open .dropdown-menu').dropdown('toggle');
+      // Change position when rendering in mobile
       if ($('#back').is(':visible')) {
         $('.datepicker').css({
-          right: '10px',
-          left: 'inherit'
+          left: '3em',
+          right: '3em',
+          top: '9em'
         });
       }
+      $('.datepicker').addClass('open dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse');
     });
 
 });
