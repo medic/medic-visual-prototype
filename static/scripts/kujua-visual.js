@@ -34,5 +34,21 @@ $(function () {
     }
   });
 
+  $('#date')
+    .datepicker()
+    .on('changeDate', function(ev) {
+      $('#date .mm-button-text').text(moment(ev.date).format('Do MMM, YYYY'));
+      $('#date').datepicker('hide');
+    })
+    .on('show', function(ev) {
+      // todo only on mobile
+      if ($('#back').is(':visible')) {
+        $('.datepicker').css({
+          right: '10px',
+          left: 'inherit'
+        });
+      }
+    });
+
 });
 

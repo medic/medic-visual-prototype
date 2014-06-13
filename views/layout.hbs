@@ -3,31 +3,22 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css"
-      href="/styles/reset.css" />
-    <link rel="stylesheet" type="text/css"
-      href="/styles/fonts.css" />
-    <link rel="stylesheet" type="text/css"
-      href="/styles/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css"
-      href="/styles/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css"
-      href="/styles/kujua-visual.css" />
-    {{#each styles}}
-      <link rel="stylesheet"
-        type="text/css" href="/styles/{{this}}.css" />
-    {{/each}}
-    <script type="text/javascript"
-      src="/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript"
-      src="/scripts/bootstrap.min.js"></script>
-    <script type="text/javascript"
-      src="/scripts/kujua-visual.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/kujua-visual.css" />
+  {{#each styles}}
+    <link rel="stylesheet" type="text/css" href="/styles/{{this}}.css" />
+  {{/each}}
     <title>{{{title}}}</title>
   </head>
   <body>
     {{{body}}}
+    <script type="text/javascript" src="/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/scripts/kujua-visual.js"></script>
   </body>
 </html>
-
-<!-- vim: set sw=2: -->
