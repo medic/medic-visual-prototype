@@ -79,6 +79,7 @@
     width: 25%;
     padding: 0 0.5em;
     margin-top: 0.5em;
+    text-align: left;
   }
 
   .mm-button-text {
@@ -256,11 +257,15 @@ body .slide-back .mm-button-text {
   margin: 0;
 }
 
-@media (min-width: 385px) {
-  .row.filters .slide-back .mm-button-text {
-    width: auto;
-    visibility: visible;
-    padding-right: 1.75em;
+@media (min-width: 360px) {
+  body .row.filters {
+    .slide-back {
+      width: 7em;
+    }
+    .slide-back .mm-button-text {
+      visibility: visible;
+      width: auto;
+    }
   }
 }
 
@@ -289,6 +294,9 @@ body .slide-back .mm-button-text {
       display: inline-block;
       font-size: 0.75em;
       padding: 0 0.25em;
+    }
+    .slide-back {
+      width: 4em;
     }
   }
   .row.content {
