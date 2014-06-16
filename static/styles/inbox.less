@@ -4,14 +4,15 @@
 }
 
 .row .inner {
-  max-width: 1170px;
+  max-width: @content-width;
   margin: 0 auto;
 }
 
 .row.header {
   background-color: @medic-slate-color;
-  max-height: 4.75em;
+  height: @header-height;
   text-align: center;
+  padding-top: 0.25em;
 
   a {
     outline: 0;
@@ -19,38 +20,39 @@
 
   .mm-icon {
     font-size: 2.75em;
+    margin: 0 auto; 
   }
   
   .welcome, .logo {
     float: left;
     opacity: 0.9;
-    padding: 0.25em 0 0 1.25em;
+    padding-left: 1.25em;
   }
 
   .logo img {
     height: 4em;
   }
 
+  .extras a, .tabs a {
+    display: inline-block;
+    height: 4.5em;
+  }
+
   .extras {
     float: right;
 
     a {
-      display: inline-block;
       width: 4em;
-      line-height: 4.5em;
     }
   }
   .tabs {
     overflow: hidden;
-    max-height: 4.75em;
+    max-height: @header-height;
     white-space: nowrap;
 
     a {
-      display: inline-block;
-      margin-top: 0.25em;
-      height: 4.75em;
       width: 8em;
-      border-radius: 1em 1em 0 0;
+      border-radius: @radius-size @radius-size 0 0;
 
       &.selected {
         background-color: @option-color;
@@ -61,15 +63,12 @@
       }
     }
 
-    .mm-icon {
-      margin: 0 auto;
-    }
   }
 }
 
 .row.filters {
   background-color: @option-color;
-  max-height: 5.5em;
+  height: @filters-height;
   font-size: 0.95em;
   padding: 0.5em 1.5em 0.75em 0.5em;
   white-space: nowrap;
@@ -103,11 +102,11 @@
 }
 
 .row.content .inbox {
-  top: 10em;
+  top: @header-height + @filters-height;
   bottom: 0;
   position: absolute;
   width: 100%;
-  max-width: 1170px;
+  max-width: @content-width;
 }
 
 .inbox-items, .item-content {
@@ -121,7 +120,7 @@
   display: none;
 }
 
-body.show-content {
+.show-content {
   .action-container, .item-content {
     display: block;
   }
@@ -226,14 +225,14 @@ body.show-content {
 .sender {
   .position {
     color: @label-color;
-    font-size: .8em;
+    font-size: 0.8em;
   }
   .name {
     font-weight: bold;
   }
 }
 
-body .slide-back {
+.slide-back {
   float: left;
   width: auto;
   display: none;
@@ -245,7 +244,7 @@ body .slide-back {
 
 .action-container {
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   top: inherit;
   z-index: 10;
   background: transparent;
@@ -281,7 +280,7 @@ body .slide-back {
 }
 
 @media (min-width: 360px) {
-  body .row.filters {
+  .row.filters {
     .slide-back {
       width: 7em;
     }
