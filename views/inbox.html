@@ -19,6 +19,32 @@
     <title></title>
   </head>
   <body ng-controller="MessageCtrl">
+
+
+    <div class="container-fluid action-container">
+      <div class="row">
+        <div class="inner">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8 column">
+            <div class="actions">
+              <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                <span class="fa fa-mail-reply"></span>
+                <p>Reply</p>
+              </a>
+              <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                <span class="fa fa-pencil"></span>
+                <p>Edit</p>
+              </a>
+              <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
+                <span class="fa fa-check-circle-o"></span>
+                <p>Verify</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid">
       <div class="row header">
         <div class="inner">
@@ -233,7 +259,7 @@
             </div>
 
             <div class="col-sm-8 item-content {{selected.status}}">
-              <div ng-show="selected">
+              <div>
                 <div class="meta">
                   <span class="time">{{selected.time}}</span>
                   <div class="sender">
@@ -287,25 +313,13 @@
                     </li>
                   </ul>
                 </div>
-                <div class="actions">
-                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
-                    <span class="fa fa-mail-reply"></span>
-                    <p>Reply</p>
-                  </a>
-                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
-                    <span class="fa fa-pencil"></span>
-                    <p>Edit</p>
-                  </a>
-                  <a class="mm-icon mm-icon-inverse mm-icon-caption" href="#">
-                    <span class="fa fa-check-circle-o"></span>
-                    <p>Verify</p>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
   </body>
 </html>

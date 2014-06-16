@@ -8,7 +8,7 @@ $(function () {
       var inboxItems = $('.inbox-items');
       inboxItems.find('.selected').removeClass('selected');
       elem.addClass('selected');
-      $('.row.content').addClass('show-body');
+      $('body').addClass('show-content');
       $('.slide-back .mm-button').removeClass('mm-button-disabled');
     }
   });
@@ -16,7 +16,7 @@ $(function () {
   $('.slide-back').on('click', function (e) {
     e.preventDefault();
     $('.slide-back .mm-button').addClass('mm-button-disabled');
-    $('.row.content').removeClass('show-body');
+    $('body').removeClass('show-content');
   });
 
   $('.row.header .tabs').on('click', 'a', function (e) {

@@ -117,6 +117,16 @@
   background-color: @background-color;
 }
 
+.action-container, .item-content {
+  display: none;
+}
+
+body.show-content {
+  .action-container, .item-content {
+    display: block;
+  }
+}
+
 .inbox-items {
   padding: 0;
   background-color: @form-background-color;
@@ -165,6 +175,8 @@
     background-color: @form-background-color;
     border: 1px solid @seperator-color;
     border-radius: @radius-size;
+    padding-bottom: 2em;
+    margin-bottom: 4.5em;
 
     h2 {
       margin: 1.25em 0 0.75em 0;
@@ -205,17 +217,52 @@
   &.incomplete .body h2 {
     color: @error-color;
   }
+}
 
-  .actions {
+.time {
+  float: right;
+}
+
+.sender {
+  .position {
+    color: @label-color;
+    font-size: .8em;
+  }
+  .name {
+    font-weight: bold;
+  }
+}
+
+body .slide-back {
+  float: left;
+  width: auto;
+  display: none;
+
+  .mm-button-text {
+    margin: 0;
+  }
+}
+
+.action-container {
+  position: fixed;
+  bottom: 0px;
+  top: inherit;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none;
+
+  .column .actions {
     height: 5em;
     background-color: rgba(0, 0, 0, 0.65);
-    border-radius: 0 0 @radius-size @radius-size;
+    border-radius: @radius-size;
     border-color: rgba(0, 0, 0, 0.8);
-    border-width: 0 1px 1px 1px;
+    border-width: 1px;
     border-style: solid;
     max-width: 30em;
     text-align: center;
     margin: 0 auto 2em;
+    overflow: hidden;
+    pointer-events: auto;
 
     .mm-icon {
       width: 30%;
@@ -231,29 +278,6 @@
       }
     }
   }
-}
-
-.time {
-  float: right;
-}
-
-.sender .position {
-  color: @label-color;
-  font-size: .8em;
-}
-
-.sender .name {
-  font-weight: bold;
-}
-
-body .slide-back {
-  float: left;
-  width: auto;
-  display: none;
-}
-
-body .slide-back .mm-button-text {
-  margin: 0;
 }
 
 @media (min-width: 360px) {
@@ -309,9 +333,6 @@ body .slide-back .mm-button-text {
       position: absolute;
       padding-top: 0;
       width: 100%;
-      -webkit-transition: left 500ms ease 0s;
-      -moz-transition: left 500ms ease 0s;
-      transition: left 500ms ease 0s;
     }
     .inbox-items {
       left: 0;
@@ -319,15 +340,50 @@ body .slide-back .mm-button-text {
     .item-content {
       left: 100%;
       .body {
-        border-radius: @radius-size @radius-size 0 0;
+        padding-bottom: 0;
+        margin-bottom: 6em;
       }
     }
   }
-  .row.content.show-body .inbox-items {
-    left: -100%;
+
+  .action-container .column,
+  .row.content .inbox-items,
+  .row.content .inbox-content {
+    -webkit-transition: left 500ms ease 0s;
+    -moz-transition: left 500ms ease 0s;
+    transition: left 500ms ease 0s;
   }
-  .row.content.show-body .item-content {
-    left: 0;
+
+  .action-container, .item-content {
+    display: block;
+  }
+
+  .action-container {
+    .column {
+      padding: 0;
+      left: 100%;
+      .actions {
+        border-width: 1px 0 0 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  body.show-content {
+    .row.content {
+      .inbox-items {
+        left: -100%;
+      }
+      .item-content {
+        left: 0;
+      }
+    }
+    .action-container .column {
+      left: 0;
+    }
   }
 
   /* hide the datepicker tick */
