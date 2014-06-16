@@ -125,24 +125,14 @@
               <span class="mm-button-dropdown">
                 <span class="fa fa-chevron-down"></span>
               </span>
-              <span class="mm-button-text">
-                Antenatal Care Report
-              </span>
+              <span class="mm-button-text">{{selectedForm.name}}</span>
             </span>
             <ul role="menu" aria-labelledby="report"
               class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
-
-              <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">Prenatal Care</a>
-              </li>
-              <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">Antenatal Care</a>
-              </li>
-              <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">Disease Surveillance</a>
-              </li>
-              <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">Stock Monitoring</a>
+              <li role="presentation" ng-repeat="form in forms">
+                <a role="menuitem" tabindex="-1" href="#" ng-click="setForm(form)">
+                  {{form.name}}
+                </a>
               </li>
             </ul>
           </span>
@@ -227,7 +217,7 @@
           <div class="inbox">
             <div class="col-sm-4 inbox-items">
               <ul>
-                <li ng-repeat="message in messages | filter:{type:filter}" ng-click="setMessage(message.id)">
+                <li ng-repeat="message in messages | filter:checkFilter()" ng-click="setMessage(message.id)">
                   <span class="time">{{message.time}}</span>
                   <span ng-switch on="message.status">
                     <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-border mm-badge-red">

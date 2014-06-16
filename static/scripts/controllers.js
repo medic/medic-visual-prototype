@@ -6,7 +6,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '1',
       type: 'form',
-      form: 'New Patient',
+      form: 'Prenatal Care',
       time: '3:55pm',
       status: 'incomplete',
       sender: {
@@ -30,7 +30,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '2',
       type: 'form',
-      form: 'Birth Outcome Report',
+      form: 'Antenatal Care',
       time: '1:23pm',
       status: 'ok',
       sender: {
@@ -42,7 +42,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '3',
       type: 'form',
-      form: 'Monthly Report',
+      form: 'Stock Monitoring',
       time: '2 Feb 2014',
       status: 'good',
       sender: {
@@ -66,7 +66,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '4',
       type: 'form',
-      form: 'New Patient',
+      form: 'Prenatal Care',
       time: '2 Dec 2013',
       status: 'ok',
       sender: {
@@ -78,7 +78,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '5',
       type: 'form',
-      form: 'Birth Outcome Report',
+      form: 'Antenatal Care',
       time: '12 Oct 2013',
       status: 'ok',
       sender: {
@@ -98,10 +98,11 @@ inboxApp.controller('MessageCtrl', function ($scope) {
         role: 'Administrator',
         clinic: 'Ganze Clinic'
       }
-    },{
+    },
+    {
       id: '7',
       type: 'form',
-      form: 'New Patient',
+      form: 'Prenatal Care',
       time: '23 Feb 2013',
       status: 'incomplete',
       sender: {
@@ -113,7 +114,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '8',
       type: 'form',
-      form: 'Birth Outcome Report',
+      form: 'Antenatal Care',
       time: '22 Feb 2013',
       status: 'good',
       sender: {
@@ -125,7 +126,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     {
       id: '9',
       type: 'form',
-      form: 'Monthly Report',
+      form: 'Stock Monitoring',
       time: '2 Feb 2013',
       status: 'incomplete',
       sender: {
@@ -135,9 +136,24 @@ inboxApp.controller('MessageCtrl', function ($scope) {
       }
     }
   ];
+  $scope.forms = [
+    {
+      code: 'PREN',
+      name: 'Prenatal Care'
+    },
+    {
+      code: 'ANTE',
+      name: 'Antenatal Care'
+    },
+    {
+      code: 'STCK',
+      name: 'Stock Monitoring'
+    }
+  ];
 
   $scope.selected = undefined;
   $scope.filter = 'message';
+  $scope.selectedForm = $scope.forms[1];
 
   $scope.setMessage = function(id) {
     $scope.messages.forEach(function(message) {
@@ -145,9 +161,21 @@ inboxApp.controller('MessageCtrl', function ($scope) {
         $scope.selected = message;
       }
     });
-  }
+  };
+
+  $scope.setForm = function(form) {
+    $scope.selectedForm = form;
+  };
 
   $scope.tab = function(filter) {
     $scope.filter = filter;
-  }
+  };
+
+  $scope.checkFilter = function() {
+    return function(message) {
+      return message.type === $scope.filter && 
+            ($scope.filter === 'message' || message.form === $scope.selectedForm.name);
+    };
+  };
+
 });
