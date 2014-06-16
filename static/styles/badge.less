@@ -1,6 +1,7 @@
 .mm-badge-border {
   padding-top: 0.45em;
   padding-bottom: 0.45em;
+  border: solid 0.2em #fff;
 }
 
 .mm-badge {
@@ -12,19 +13,12 @@
   display: inline-block;
   margin: 0.2em;
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 
   .fa {
     text-shadow: none;
   }
-}
-
-div.mm-badge {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-  
-.mm-badge-border {
-  border: solid 0.2em #fff;
 }
 
 .mm-badge-round {
@@ -42,11 +36,11 @@ div.mm-badge {
 }
 
 .mm-badge-red {
-  background-color: rgb(218, 69, 72);
+  background-color: @error-color;
 }
 
 .mm-badge-green {
-  background-color: rgb(160, 186, 98);
+  background-color: @ok-color;
 }
 
 .mm-badge-overlay {

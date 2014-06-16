@@ -19,13 +19,11 @@
   border-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(255, 255, 255, 0.8);
 
-  li {
-    a {
-      font-size: 1.1em;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    a:hover {
+  li a {
+    font-size: 1.1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:hover {
       color: #fff;
       background-color: rgba(0, 0, 0, 0.75);
     }
@@ -83,9 +81,7 @@
       background-color: rgba(0, 0, 0, 0.85);
     }
   }
-  .open .mm-dropdown-menu-inverse {
-    li a:hover {
-      background-color: rgba(255, 255, 255, 0.85);
-    }
+  .open .mm-dropdown-menu-inverse li a:hover {
+    background-color: rgba(255, 255, 255, 0.85);
   }
 }
