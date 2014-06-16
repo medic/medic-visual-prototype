@@ -1,10 +1,12 @@
 var inboxApp = angular.module('inboxApp', []);
 
 inboxApp.controller('MessageCtrl', function ($scope) {
+  
   $scope.messages = [
     {
       id: '1',
-      type: 'New Patient',
+      type: 'form',
+      form: 'New Patient',
       time: '3:55pm',
       status: 'incomplete',
       sender: {
@@ -14,8 +16,21 @@ inboxApp.controller('MessageCtrl', function ($scope) {
       }
     },
     {
+      id: '11',
+      type: 'message',
+      form: 'Message',
+      time: '2 Dec 2013',
+      status: 'ok',
+      sender: {
+        name: 'Jones, Susan',
+        role: 'Clinician',
+        clinic: 'Ganze Clinic'
+      }
+    },
+    {
       id: '2',
-      type: 'Birth Outcome Report',
+      type: 'form',
+      form: 'Birth Outcome Report',
       time: '1:23pm',
       status: 'ok',
       sender: {
@@ -26,7 +41,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     },
     {
       id: '3',
-      type: 'Monthly Report',
+      type: 'form',
+      form: 'Monthly Report',
       time: '2 Feb 2014',
       status: 'good',
       sender: {
@@ -34,9 +50,23 @@ inboxApp.controller('MessageCtrl', function ($scope) {
         role: 'Administrator',
         clinic: 'Ganze Clinic'
       }
-    },{
+    },
+    {
+      id: '10',
+      type: 'message',
+      form: 'Message',
+      time: '2 Dec 2013',
+      status: 'ok',
+      sender: {
+        name: 'Jones, Susan',
+        role: 'Clinician',
+        clinic: 'Ganze Clinic'
+      }
+    },
+    {
       id: '4',
-      type: 'New Patient',
+      type: 'form',
+      form: 'New Patient',
       time: '2 Dec 2013',
       status: 'ok',
       sender: {
@@ -47,7 +77,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     },
     {
       id: '5',
-      type: 'Birth Outcome Report',
+      type: 'form',
+      form: 'Birth Outcome Report',
       time: '12 Oct 2013',
       status: 'ok',
       sender: {
@@ -58,7 +89,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     },
     {
       id: '6',
-      type: 'Monthly Report',
+      type: 'form',
+      form: 'Monthly Report',
       time: '2 Oct 2013',
       status: 'good',
       sender: {
@@ -68,7 +100,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
       }
     },{
       id: '7',
-      type: 'New Patient',
+      type: 'form',
+      form: 'New Patient',
       time: '23 Feb 2013',
       status: 'incomplete',
       sender: {
@@ -79,7 +112,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     },
     {
       id: '8',
-      type: 'Birth Outcome Report',
+      type: 'form',
+      form: 'Birth Outcome Report',
       time: '22 Feb 2013',
       status: 'good',
       sender: {
@@ -90,7 +124,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     },
     {
       id: '9',
-      type: 'Monthly Report',
+      type: 'form',
+      form: 'Monthly Report',
       time: '2 Feb 2013',
       status: 'incomplete',
       sender: {
@@ -102,6 +137,7 @@ inboxApp.controller('MessageCtrl', function ($scope) {
   ];
 
   $scope.selected = undefined;
+  $scope.filter = 'message';
 
   $scope.setMessage = function(id) {
     $scope.messages.forEach(function(message) {
@@ -109,5 +145,9 @@ inboxApp.controller('MessageCtrl', function ($scope) {
         $scope.selected = message;
       }
     });
+  }
+
+  $scope.tab = function(filter) {
+    $scope.filter = filter;
   }
 });

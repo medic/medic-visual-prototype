@@ -78,25 +78,20 @@
           </div>
 
           <div class="tabs">
-            <a href="#">
-              <span class="mm-icon mm-icon-inverse">
+            <a href="#" ng-click="tab('message')" class="selected">
+              <span class="mm-icon">
                 <span class="fa fa-envelope"></span>
                 <span class="mm-badge-overlay mm-badge-overlay-top">
                   <span class="mm-badge mm-badge-red mm-badge-border">405</span>
                 </span>
               </span>
             </a>
-            <a href="#" class="selected">
-              <span class="mm-icon mm-icon-nudge-down">
+            <a href="#" ng-click="tab('form')">
+              <span class="mm-icon mm-icon-inverse mm-icon-nudge-down">
                 <span class="fa fa-list-alt"></span>
               </span>
             </a>
-            <a href="#">
-              <span class="mm-icon mm-icon-inverse">
-                <span class="fa fa-asterisk"></span>
-              </span>
-            </a>
-            <a href="#">
+            <a href="#" ng-click="tab('reporting')">
               <span class="mm-icon mm-icon-inverse">
                 <span class="fa fa-bar-chart-o"></span>
                 <span class="mm-badge-overlay">
@@ -232,7 +227,7 @@
           <div class="inbox">
             <div class="col-sm-4 inbox-items">
               <ul>
-                <li ng-repeat="message in messages" ng-click="setMessage(message.id)">
+                <li ng-repeat="message in messages | filter:{type:filter}" ng-click="setMessage(message.id)">
                   <span class="time">{{message.time}}</span>
                   <span ng-switch on="message.status">
                     <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-border mm-badge-red">
@@ -252,7 +247,7 @@
                         {{message.sender.role}}, {{message.sender.clinic}}
                       </div>
                     </div>
-                    <div>{{message.type}}</div>
+                    <div>{{message.form}}</div>
                   </div>
                 </li>
               </ul>
@@ -281,7 +276,7 @@
                   </span>
                 </div>
                 <div class="body">
-                  <h2>{{selected.type}}</h2>
+                  <h2>{{selected.form}}</h2>
                   <ul>
                     <li>
                       <label>Patient ID</label>
