@@ -34,6 +34,63 @@ $(function () {
     }
   });
 
+  var getForms = function(dropdown, selector) {
+    var forms = [];
+    dropdown.find(selector).each(function() {
+      forms.push($(this).data('form'));
+    });
+    return forms;
+  };
+
+  var getTitle = function(dropdown) {
+    var allForms = getForms(dropdown, '[role=menuitem]');
+    var selectedForms = getForms(dropdown, '[role=menuitem].selected');
+    if (selectedForms.length === 0 || selectedForms.length === allForms.length) {
+      return dropdown.data('label-no-filter');
+    }
+    if (selectedForms.length > 1) {
+      return selectedForms.length + ' ' + dropdown.data('filter-label');
+    }
+    return selectedForms[0].name;
+  };
+
+  var updateMultipleSelect = function(dropdown) {
+    dropdown.find('.mm-button-text').text(getTitle(dropdown));
+  };
+
+  $('.mm-multiple-select').each(function() {
+    var select = $(this);
+    updateMultipleSelect(select);
+    select.on('update', function() {
+      updateMultipleSelect($(this));
+    });
+  });
+
+  $('#formTypeDropdown').on('update', function() {
+    var forms = getForms($(this), '[role=menuitem].selected');
+    angular.element($('body')).scope().$apply(function(scope) {
+      scope.setFilterForms(forms);
+    });
+  });
+
+  var blockSelectHide = false;
+
+  $('.mm-multiple-select').on('click', '[role=menuitem]', function(e) {
+    var item = $(this);
+    item.blur();
+    item.toggleClass('selected');
+    item.closest('.dropdown').trigger({ type: 'update' });
+    updateMultipleSelect(item.closest('.dropdown'));
+    blockSelectHide = true;
+  });
+
+  $('.mm-multiple-select').on('hide.bs.dropdown', function (e) {
+    if (blockSelectHide) {
+      e.preventDefault();
+      blockSelectHide = false;
+    }
+  });
+
   $('#date')
     .datepicker()
     .on('changeDate', function(ev) {

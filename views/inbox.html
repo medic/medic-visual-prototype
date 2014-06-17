@@ -78,7 +78,7 @@
           </div>
 
           <div class="tabs">
-            <a href="#" ng-click="tab('message')" class="selected">
+            <a href="#" ng-click="setFilterType('message')" class="selected">
               <span class="mm-icon">
                 <span class="fa fa-envelope"></span>
                 <span class="mm-badge-overlay mm-badge-overlay-top">
@@ -86,7 +86,7 @@
                 </span>
               </span>
             </a>
-            <a href="#" ng-click="tab('form')">
+            <a href="#" ng-click="setFilterType('form')">
               <span class="mm-icon mm-icon-inverse mm-icon-nudge-down">
                 <span class="fa fa-list-alt">
                   <span class="mm-badge-overlay mm-badge-overlay-top">
@@ -95,7 +95,7 @@
                 </span>
               </span>
             </a>
-            <a href="#" ng-click="tab('reporting')">
+            <a href="#" ng-click="setFilterType('reporting')">
               <span class="mm-icon mm-icon-inverse">
                 <span class="fa fa-bar-chart-o"></span>
               </span>
@@ -112,26 +112,24 @@
               <span class="mm-button-icon">
                 <span class="fa fa-chevron-left"></span>
               </span>
-              <span class="mm-button-text">
-                Back
-              </span>
+              <span class="mm-button-text">Back</span>
             </span>
           </span>
 
-          <span class="dropdown mm-dropdown">
-            <span id="form_type" class="mm-button mm-button-nudge-down" data-toggle="dropdown">
+          <span id="formTypeDropdown" class="dropdown mm-dropdown mm-multiple-select" data-label-no-filter="All form types" data-filter-label="form types">
+            <span id="form_type" class="mm-button mm-button-nudge-down" data-toggle="dropdown" ng-class="{'mm-button-disabled': filterType === 'message', disabled: filterType === 'message'}">
               <span class="mm-button-icon">
                 <span class="fa fa-list-alt"></span>
               </span>
               <span class="mm-button-dropdown">
                 <span class="fa fa-chevron-down"></span>
               </span>
-              <span class="mm-button-text">{{selectedForm.name}}</span>
+              <span class="mm-button-text"></span>
             </span>
             <ul role="menu" aria-labelledby="report"
               class="dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse">
               <li role="presentation" ng-repeat="form in forms">
-                <a role="menuitem" tabindex="-1" href="#" ng-click="setForm(form)">
+                <a role="menuitem" tabindex="-1" href="#" data-form="{{form}}">
                   {{form.name}}
                 </a>
               </li>

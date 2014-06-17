@@ -152,8 +152,8 @@ inboxApp.controller('MessageCtrl', function ($scope) {
   ];
 
   $scope.selected = undefined;
-  $scope.filter = 'message';
-  $scope.selectedForm = $scope.forms[1];
+  $scope.filterType = 'message';
+  $scope.filterForms = [];
 
   $scope.setMessage = function(id) {
     $scope.messages.forEach(function(message) {
@@ -163,18 +163,38 @@ inboxApp.controller('MessageCtrl', function ($scope) {
     });
   };
 
-  $scope.setForm = function(form) {
-    $scope.selectedForm = form;
+  $scope.setFilterType = function(filterType) {
+    $scope.filterType = filterType;
   };
 
-  $scope.tab = function(filter) {
-    $scope.filter = filter;
+  $scope.setFilterForms = function(filterForms) {
+    console.log(filterForms);
+    $scope.filterForms = filterForms;
+  }
+
+  var checkFilterType = function(message) {
+    return message.type === $scope.filterType;
+  };
+
+  var checkFilterForms = function(message) {
+    if ($scope.filterType === 'message') {
+      return true;
+    }
+    if ($scope.filterForms.length === 0) {
+      return true;
+    }
+    for (var i = 0; i < $scope.filterForms.length; i++) {
+      if ($scope.filterForms[i].name === message.form) {
+        return true;
+      }
+    }
+    return false;
   };
 
   $scope.checkFilter = function() {
     return function(message) {
-      return message.type === $scope.filter && 
-            ($scope.filter === 'message' || message.form === $scope.selectedForm.name);
+      return checkFilterType(message)
+          && checkFilterForms(message);
     };
   };
 
