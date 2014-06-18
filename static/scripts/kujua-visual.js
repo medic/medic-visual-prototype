@@ -113,7 +113,7 @@ $(function () {
       }
       $('.datepicker').addClass('open');
     });
-    $('.datepicker').addClass('dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse');
+  $('.datepicker').addClass('dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse');
 
 });
 
