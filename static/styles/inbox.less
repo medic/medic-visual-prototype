@@ -13,24 +13,34 @@
   height: @header-height;
   text-align: center;
   padding-top: 0.25em;
+  .button-text-inverse;
 
   a {
+    .button-text-inverse;
     outline: 0;
+    padding-top: 0.25em;
   }
 
   .mm-icon {
-    font-size: 2.75em;
-    margin: 0 auto; 
-  }
-  
-  .welcome, .logo {
-    float: left;
-    opacity: 0.9;
-    padding-left: 1.25em;
+    margin: 0 auto;
+    font-size: 2em;
   }
 
-  .logo img {
-    height: 4em;
+
+  .logo {
+    float: left;
+    opacity: 0.9;
+    padding: 0 1.25em;
+    img {
+      height: 4em;
+    }
+  }
+
+  .welcome {
+    float: left;
+    text-align: left;
+    padding-top: 0.5em;
+    font-size: 1.1em;
   }
 
   .extras a, .tabs a {
@@ -50,15 +60,22 @@
     max-height: @header-height;
     white-space: nowrap;
 
+    .button-label {
+      margin-top: -5px;
+    }
+    
     a {
-      width: 8em;
+      width: 7em;
       border-radius: @radius-size @radius-size 0 0;
 
       &.selected {
         background-color: @option-color;
+        .button-label {
+          .button-text;
+        }
       }
 
-      &:hover {
+      &:hover, &:focus {
         text-decoration: none;
       }
     }
@@ -70,7 +87,7 @@
   background-color: @option-color;
   height: @filters-height;
   font-size: 0.95em;
-  padding: 0.5em 1.5em 0.75em 0.5em;
+  padding: 0 1.5em 0 0.5em;
   white-space: nowrap;
   box-shadow: 0 5px 2px -2px #aaa;
 
@@ -392,6 +409,17 @@
 }
 
 @media (max-width: 360px) {
+  .row.header {
+    .button-label, .welcome {
+      display: none;
+    }
+    .tabs a {
+      width: 6em;
+    }
+    .mm-icon {
+      font-size: 2.5em;
+    }
+  }
   .row.filters .slide-back {
     width: 4em;
     .mm-button-text {
