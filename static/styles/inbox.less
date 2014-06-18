@@ -26,7 +26,6 @@
     font-size: 2em;
   }
 
-
   .logo {
     float: left;
     opacity: 0.9;
@@ -52,9 +51,21 @@
     float: right;
 
     a {
-      width: 4em;
+      padding-top: 0.5em;
+      width: 3em;
     }
   }
+
+  .dropdown ul a {
+    width: 15em;
+    height: auto;
+    line-height: 1.5em;
+  }
+
+  .dropdown-menu {
+    margin: 3.4em 1em;
+  }
+
   .tabs {
     overflow: hidden;
     max-height: @header-height;
@@ -306,26 +317,35 @@
   .inbox-items li:hover {
     background-color: inherit;
   }
+  .row.header, .row.filters {
+    .dropdown .mm-dropdown-menu {
+      text-align: left;
+      a {
+        width: 100%;
+      }
+    }
+  }
   .row.header {
     font-size: 0.6em;
+    .dropdown-menu {
+      font-size: 1.5em;
+      margin: 0;
+    }
   }
   .row.filters {
     text-align: right;
     max-height: 3.55em;
     padding: 0.25em 0.5em 1em 0.5em;
-    .mm-dropdown-menu {
-      text-align: left;
-    }
-    .mm-button-text {
-      width: 0;
-      visibility: hidden;
-      padding-right: 0.75em;
-    }
     .dropdown {
       width: 6.25em;
       display: inline-block;
       font-size: 0.75em;
       padding: 0 0.25em;
+    }
+    .mm-button-text {
+      width: 0;
+      visibility: hidden;
+      padding-right: 0.75em;
     }
     .slide-back {
       width: 7em;
@@ -408,7 +428,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .row.header {
     .button-label, .welcome {
       display: none;
