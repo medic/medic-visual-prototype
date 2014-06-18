@@ -94,7 +94,7 @@
   }
 }
 
-.row.filters {
+.filters {
   background-color: @option-color;
   height: @filters-height;
   font-size: 0.95em;
@@ -103,10 +103,18 @@
   box-shadow: 0 5px 2px -2px #aaa;
 
   .dropdown {
-    width: 23%;
+    width: 22%;
     padding: 0 0.5em;
     margin-top: 0.5em;
     text-align: left;
+
+    &.pair-left, &.pair-right {
+      width: 13%;
+
+      .mm-button-text {
+        width: 100%;
+      }
+    }
   }
 
   .mm-button-text {
@@ -332,7 +340,7 @@
       margin: 0;
     }
   }
-  .row.filters {
+  .filters {
     text-align: right;
     max-height: 3.55em;
     padding: 0.25em 0.5em 1em 0.5em;
@@ -341,6 +349,9 @@
       display: inline-block;
       font-size: 0.75em;
       padding: 0 0.25em;
+      &.pair-left, &.pair-right {
+        width: 3em;
+      }
     }
     .mm-button-text {
       width: 0;

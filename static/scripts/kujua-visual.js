@@ -91,11 +91,11 @@ $(function () {
     }
   });
 
-  $('#date')
+  $('#date-from, #date-to')
     .datepicker()
     .on('changeDate', function(ev) {
-      $('#date .mm-button-text').text(moment(ev.date).format('Do MMM, YYYY'));
-      $('#date').datepicker('hide');
+      $(this).find('.mm-button-text').text(moment(ev.date).format('D MMM YYYY'));
+      $(this).datepicker('hide');
     })
     .on('show', function(ev) {
       $('.dropdown.open .dropdown-menu').dropdown('toggle');

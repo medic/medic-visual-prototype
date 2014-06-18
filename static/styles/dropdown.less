@@ -37,6 +37,30 @@
 
 }
 
+.dropdown.mm-dropdown {
+  &.pair-left {
+    padding-right: 0;
+    .mm-button {
+      border-radius: 1.35em 0 0 1.35em;
+    }
+    .mm-button-dropdown {
+      float: left;
+    }
+    .mm-button-text {
+      text-align: right;
+      width: 95%;
+    }
+  }
+
+  &.pair-right {
+    padding-left: 0;
+    .mm-button {
+      border-radius: 0 1.35em 1.35em 0;
+      padding-left: 0.5em;
+    }
+  }
+}
+
 .mm-dropdown-menu-inverse li a:hover, 
 .datepicker td.day:hover,
 .datepicker thead tr:first-child th:hover,
