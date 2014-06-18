@@ -106,9 +106,14 @@ $(function () {
           right: '3em',
           top: '9em'
         });
+      } else {
+        $('.datepicker').css({
+          'margin-left': $(this).is('#date-to') ? '-7%' : ''
+        });
       }
-      $('.datepicker').addClass('open dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse');
+      $('.datepicker').addClass('open');
     });
+    $('.datepicker').addClass('dropdown-menu mm-dropdown-menu mm-dropdown-menu-inverse');
 
 });
 
