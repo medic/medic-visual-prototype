@@ -29,9 +29,9 @@
   .logo {
     float: left;
     opacity: 0.9;
-    padding: 0 1.25em;
+    padding: 0.15em 1.25em;
     img {
-      height: 4em;
+      height: 3.8em;
     }
   }
 
@@ -49,6 +49,7 @@
 
   .extras {
     float: right;
+    padding-right: 0.5em;
 
     a {
       padding-top: 0.75em;
@@ -99,7 +100,7 @@
   background-color: @option-color;
   height: @filters-height;
   font-size: 0.95em;
-  padding: 0.75em 1.5em 0 0.5em;
+  padding: 0.65em 1.5em 0 0.5em;
   white-space: nowrap;
   box-shadow: 0 5px 2px -2px #aaa;
 
@@ -343,12 +344,13 @@
   .filters {
     text-align: right;
     max-height: 3.15em;
-    padding: 0.25em 0.5em 1em 0.5em;
+    padding: 0.4em 0.5em 1em 0.5em;
     .dropdown {
       width: 6.25em;
       display: inline-block;
       font-size: 0.77em;
       padding: 0 0.25em;
+      vertical-align: top;
       &.pair-left, &.pair-right {
         width: 3em;
       }
@@ -360,7 +362,6 @@
     }
     .slide-back {
       width: 7em;
-      padding-top: 0.25em;
       .mm-button-text {
         visibility: visible;
         width: auto;
@@ -445,9 +446,6 @@
 }
 
 @media (max-width: 400px) {
-  .welcome {
-    display: none;
-  }
   .row.filters .slide-back {
     width: 4em;
     .mm-button-text {
@@ -459,7 +457,7 @@
 
 @media (max-width: 767px) {
   .row.header {
-    .button-label {
+    .welcome, .button-label {
       display: none;
     }
     .tabs a {
