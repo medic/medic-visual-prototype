@@ -2,16 +2,12 @@
 $(function () {
 
   $('.inbox-items').on('click', 'li', function (e) {
-    console.log('0');
     e.preventDefault();
     var elem = $(this);
-    console.log('1');
     if (!elem.is('.selected')) {
-      console.log('2');
       var inboxItems = $('.inbox-items');
       inboxItems.find('.selected').removeClass('selected');
       elem.addClass('selected');
-      console.log('3');
       $('body').addClass('show-content');
       $('.slide-back .mm-button').removeClass('mm-button-disabled');
     }

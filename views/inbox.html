@@ -26,7 +26,7 @@
   <body>
     <script type="text/x-handlebars" data-template-name="inbox">
 
-
+    <div {{bind-attr class=":page showContent:show-content"}}>
     <div class="container-fluid action-container">
       <div class="row">
         <div class="inner">
@@ -63,7 +63,7 @@
 
           <div class="welcome">
             <div>Medic Mobile</div>
-            <div>INBOX {{anySelected}}</div>
+            <div>INBOX</div>
           </div>
 
           <div class="extras">
@@ -140,7 +140,7 @@
         <div class="inner">
 
           <span class="dropdown mm-dropdown slide-back">
-            <span id="back" class="mm-button mm-button-disabled mm-button-nudge-down">
+            <span id="back" {{bind-attr class=":mm-button :mm-button-nudge-down showContent::mm-button-disabled"}} {{action "unshowContent" on="click"}}>
               <span class="mm-button-icon">
                 <span class="fa fa-chevron-left"></span>
               </span>
@@ -359,7 +359,7 @@
         </div>
 
     </div>
-
+    </div>
   </script>
 
   </body>
