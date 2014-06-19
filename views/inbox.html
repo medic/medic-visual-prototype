@@ -13,12 +13,18 @@
     <script type="text/javascript" src="/scripts/moment.min.js"></script>
     <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/scripts/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="/scripts/angular.min.js"></script>
-    <script type="text/javascript" src="/scripts/controllers.js"></script>
+    <script type="text/javascript" src="/scripts/handlebars-1.1.2.js"></script>
+    <script type="text/javascript" src="/scripts/ember-1.5.1.js"></script>
+    <script type="text/javascript" src="/scripts/ember-data-1.0.0.beta.js"></script>
     <script type="text/javascript" src="/scripts/kujua-visual.js"></script>
+    <script type="text/javascript" src="/scripts/router.js"></script>
+    <script type="text/javascript" src="/scripts/models/message.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/inbox_controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/message_controller.js"></script>
     <title></title>
   </head>
-  <body ng-controller="MessageCtrl">
+  <body>
+    <script type="text/x-handlebars" data-template-name="inbox">
 
 
     <div class="container-fluid action-container">
@@ -57,7 +63,7 @@
 
           <div class="welcome">
             <div>Medic Mobile</div>
-            <div>INBOX</div>
+            <div>INBOX {{anySelected}}</div>
           </div>
 
           <div class="extras">
@@ -256,99 +262,105 @@
         </div>
       </div>
 
-      <div class="row content">
-        <div class="inner">
-          <div class="inbox">
-            <div class="col-sm-4 inbox-items">
-              <ul>
-                <li ng-repeat="message in messages | filter:checkFilter()" ng-click="setMessage(message.id)">
-                  <span class="time">{{message.time}}</span>
-                  <span ng-switch on="message.status">
-                    <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-border mm-badge-red">
-                      <span class="fa fa-exclamation"></span>
-                    </span>
-                    <span ng-switch-when="good" class="mm-badge mm-badge-round mm-badge-border mm-badge-green">
-                      <span class="fa fa-check"></span>
-                    </span>
-                    <span ng-switch-default class="mm-badge mm-badge-round mm-badge-border mm-badge-green">
-                      <span class="fa"></span>
-                    </span>
-                  </span>
-                  <div class="detail">
-                    <div class="sender">
-                      <div class="name">{{message.sender.name}}</div>
-                      <div class="position">
-                        {{message.sender.role}}, {{message.sender.clinic}}
+        <div class="row content">
+          <div class="inner">
+            <div class="inbox">
+              <div class="col-sm-4 inbox-items">
+                <ul>
+                  {{#each}}
+                  <li {{action "select" on="click"}} {{bind-attr class=" selected:selected"}}>
+                    <span class="time">{{time}}</span>
+                    {{#if valid}}
+                      <span class="mm-badge mm-badge-round mm-badge-border mm-badge-green">
+                        <span {{bind-attr class=":fa verified:fa-check"}}></span>
+                      </span>
+                    {{else}}
+                      <span class="mm-badge mm-badge-round mm-badge-border mm-badge-red">
+                        <span class="fa fa-exclamation"></span>
+                      </span>
+                    {{/if}}
+                    <div class="detail">
+                      <div class="sender">
+                        <div class="name">{{sender_name}}</div>
+                        <div class="position">
+                          {{sender_role}}, {{sender_clinic}}
+                        </div>
                       </div>
+                      <div>{{form}}</div>
                     </div>
-                    <div>{{message.form}}</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
 
-            <div class="col-sm-8 item-content {{selected.status}}">
-              <div>
-                <div class="meta">
-                  <span class="time">{{selected.time}}</span>
-                  <div class="sender">
-                    <div class="name">{{selected.sender.name}}</div>
-                    <div class="position">{{selected.sender.role}}, {{selected.sender.clinic}}</div>
+
+              <div class="col-sm-8 item-content">
+              {{#each}}
+              {{#if selected}}
+                <div>
+                  <div class="meta">
+                    <span class="time">{{time}}</span>
+                    <div class="sender">
+                      <div class="name">{{sender_name}}</div>
+                      <div class="position">{{sender_role}}, {{sender_clinic}}</div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    {{#if valid}}
+                      <span class="mm-badge mm-badge-round mm-badge-green">
+                        <span {{bind-attr class=":fa verified:fa-check"}}></span>
+                      </span>
+                    {{else}}
+                      <span class="mm-badge mm-badge-round mm-badge-red">
+                        <span class="fa fa-exclamation"></span>
+                      </span>
+                    {{/if}}
+
+                  </div>
+                  <div class="body">
+                    <h2>{{form}}</h2>
+                    <ul>
+                      <li>
+                        <label>Patient ID</label>
+                        <p>548912254</p>
+                      </li>
+                      <li>
+                        <label>Days Since Delivery</label>
+                        <p>5</p>
+                      </li>
+                      <li class="missing">
+                        <label>Physician Present?</label>
+                        <p>Not Recorded</p>
+                      </li>
+                      <li>
+                        <label>Date of Delivery</label>
+                        <p>June 7<sup>th</sup>, 2014</p>
+                      </li>
+                      <li>
+                        <label>Misoprostol Administered?</label>
+                        <p>Yes</p>
+                      </li>
+                      <li>
+                        <label>Birth Outcome</label>
+                        <p>Alive and well</p>
+                      </li>
+                      <li>
+                        <label>Date Submitted</label>
+                        <p>June 12<sup>th</sup>, 2014</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="status">
-                  <span ng-switch on="selected.status">
-                    <span ng-switch-when="incomplete" class="mm-badge mm-badge-round mm-badge-red">
-                      <span class="fa fa-exclamation"></span>
-                    </span>
-                    <span ng-switch-when="good" class="mm-badge mm-badge-round mm-badge-green">
-                      <span class="fa fa-check"></span>
-                    </span>
-                    <span ng-switch-default class="mm-badge mm-badge-round mm-badge-green">
-                      <span class="fa"></span>
-                    </span>
-                  </span>
-                </div>
-                <div class="body">
-                  <h2>{{selected.form}}</h2>
-                  <ul>
-                    <li>
-                      <label>Patient ID</label>
-                      <p>548912254</p>
-                    </li>
-                    <li>
-                      <label>Days Since Delivery</label>
-                      <p>5</p>
-                    </li>
-                    <li class="missing">
-                      <label>Physician Present?</label>
-                      <p>Not Recorded</p>
-                    </li>
-                    <li>
-                      <label>Date of Delivery</label>
-                      <p>June 7<sup>th</sup>, 2014</p>
-                    </li>
-                    <li>
-                      <label>Misoprostol Administered?</label>
-                      <p>Yes</p>
-                    </li>
-                    <li>
-                      <label>Birth Outcome</label>
-                      <p>Alive and well</p>
-                    </li>
-                    <li>
-                      <label>Date Submitted</label>
-                      <p>June 12<sup>th</sup>, 2014</p>
-                    </li>
-                  </ul>
-                </div>
+              {{/if}}
+              {{/each}}
               </div>
             </div>
           </div>
         </div>
-      </div>
+
     </div>
 
+  </script>
 
   </body>
 </html>
