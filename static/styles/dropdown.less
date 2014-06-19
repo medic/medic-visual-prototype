@@ -83,34 +83,56 @@
   }
 }
 
+.mm-dropdown-menu-modal {
+  margin: 0;
+  position: fixed;
+  display: block;
+  padding: 2em 1em;
+  font-size: 1.25em;
+  border-width: 1px;
+
+  li a {
+    color: #fff;
+    padding: 0.5em 1em;
+    text-shadow: none;
+    font-weight: bold;
+  }
+
+  li a:hover {
+    color: #000;
+    border-radius: 3pt;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
 @media (max-width: 767px) {
   .open .mm-dropdown-menu, .datepicker.mm-dropdown-menu {
     border-radius: 7pt;
   }
-  
-  .open .mm-dropdown-menu {    
+  .open .mm-dropdown-menu {
     top: 9em;
-    margin: 0;
-    position: fixed;
     left: 2em;
     right: 2em;
-    display: block;
-    padding: 2em 1em;
-    font-size: 1.25em;
-    border-width: 1px;
-
-    li a {
-      padding: 0.5em 1em;
-      text-shadow: none;
-      font-weight: bold;
-    }
-
-    li a:hover {
-      border-radius: 3pt;
-      background-color: rgba(0, 0, 0, 0.85);
-    }
+    .mm-dropdown-menu-modal
   }
   .open .mm-dropdown-menu-inverse li a:hover {
     background-color: rgba(255, 255, 255, 0.85);
   }
 }
+
+@media (min-width: 767px) {
+  .open .mm-dropdown-menu-fullscreen {
+    border-radius: 7pt;
+  }
+  .open .mm-dropdown-menu-fullscreen {
+    top: 7em;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    .mm-dropdown-menu-modal
+  }
+  .mm-dropdown-menu-fullscreen.mm-dropdown-menu-inverse li a:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+
